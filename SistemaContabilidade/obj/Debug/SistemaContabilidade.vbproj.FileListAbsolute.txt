@@ -66,3 +66,20 @@ C:\Users\Renan\Documents\Visual Studio 2017\Projects\Contabilidade\SistemaContab
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\Contabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\Contabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\Contabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb

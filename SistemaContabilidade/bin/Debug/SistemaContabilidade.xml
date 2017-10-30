@@ -22,5 +22,10 @@ SistemaContabilidade
   pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
 </summary>
 </member>
+<member name="P:SistemaContabilidade.My.Resources.Resources.BG3">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
