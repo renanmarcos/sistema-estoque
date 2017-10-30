@@ -1,0 +1,51 @@
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
+C:\Users\l-fer\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
+C:\Users\Renan\Documents\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaContabilidade\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
