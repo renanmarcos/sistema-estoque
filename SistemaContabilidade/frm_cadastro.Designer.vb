@@ -227,7 +227,7 @@ Partial Class frm_cadastro
         Me.MaximumSize = New System.Drawing.Size(717, 416)
         Me.Name = "frm_cadastro"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_cadastro"
+        Me.Text = "Cadastro de clientes"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

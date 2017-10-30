@@ -62,16 +62,19 @@ Partial Class frm_manutencao
         '
         Me.numero.HeaderText = "Número"
         Me.numero.Name = "numero"
+        Me.numero.ReadOnly = True
         '
         'usuario
         '
         Me.usuario.HeaderText = "Usuário"
         Me.usuario.Name = "usuario"
+        Me.usuario.ReadOnly = True
         '
         'status
         '
         Me.status.HeaderText = "Status conta"
         Me.status.Name = "status"
+        Me.status.ReadOnly = True
         '
         'ativar
         '
@@ -89,6 +92,7 @@ Partial Class frm_manutencao
         Me.bloquear.Image = CType(resources.GetObject("bloquear.Image"), System.Drawing.Image)
         Me.bloquear.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.bloquear.Name = "bloquear"
+        Me.bloquear.ReadOnly = True
         '
         'excluir
         '
@@ -96,6 +100,7 @@ Partial Class frm_manutencao
         Me.excluir.Image = CType(resources.GetObject("excluir.Image"), System.Drawing.Image)
         Me.excluir.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.excluir.Name = "excluir"
+        Me.excluir.ReadOnly = True
         '
         'txt_parametros
         '
@@ -192,7 +197,7 @@ Partial Class frm_manutencao
         Me.MaximumSize = New System.Drawing.Size(717, 515)
         Me.Name = "frm_manutencao"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_manutencao"
+        Me.Text = "Contas Ativas/Bloqueadas"
         CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

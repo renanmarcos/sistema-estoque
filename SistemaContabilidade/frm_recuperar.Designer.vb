@@ -119,7 +119,7 @@ Partial Class frm_recuperar
         Me.MaximumSize = New System.Drawing.Size(717, 360)
         Me.Name = "frm_recuperar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_recuperar"
+        Me.Text = "Recuperar senha"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -109,7 +109,7 @@ Partial Class frm_menu
         Me.MaximumSize = New System.Drawing.Size(717, 360)
         Me.Name = "frm_menu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_menu"
+        Me.Text = "Menu principal"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

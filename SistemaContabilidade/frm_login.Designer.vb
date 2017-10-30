@@ -162,7 +162,7 @@ Partial Class frm_login
         Me.MaximumSize = New System.Drawing.Size(717, 416)
         Me.Name = "frm_login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Login"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
