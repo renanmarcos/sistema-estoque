@@ -30,7 +30,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If txt_usuario.Text = Nothing Or txt_email.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_resposta.Text = Nothing Then
-            MsgBox("Todos os campos precisam ser preenchidos.")
+            MsgBox("Todos os campos precisam ser preenchidos.", vbInformation + vbOKOnly, "Atenção")
         Else
             If StrComp(txt_senha.Text, txt_repetir.Text, vbBinaryCompare) = 0 Then
                 sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "'"
@@ -41,12 +41,12 @@
                       & txt_email.Text & "', '" & txt_senha.Text & "', '" & cmb_perguntas.Text & "', '" _
                       & txt_resposta.Text & "', 'ativa', '" & cmb_tipo.Text & "', 3)"
                     db.Execute(sql)
-                    MsgBox("Usuário cadastrado com sucesso!")
+                    MsgBox("Usuário cadastrado com sucesso!", vbOKOnly, "Concluído")
                 Else
-                    MsgBox("Usuário já cadastrado no sistema.")
+                    MsgBox("Usuário já cadastrado no sistema.", vbInformation + vbOKOnly, "Erro")
                 End If
             Else
-                MsgBox("Senhas não coincidem")
+                MsgBox("Senhas não coincidem.", vbInformation + vbOKOnly, "Atenção")
             End If
         End If
     End Sub

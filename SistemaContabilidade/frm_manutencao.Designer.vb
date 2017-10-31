@@ -32,13 +32,14 @@ Partial Class frm_manutencao
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgv_dados = New System.Windows.Forms.DataGridView()
-        Me.excluir = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.bloquear = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ativar = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ativar = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.bloquear = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.excluir = New System.Windows.Forms.DataGridViewImageColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btn_voltar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -135,11 +136,11 @@ Partial Class frm_manutencao
         Me.GroupBox1.Controls.Add(Me.rd_bloqueadas)
         Me.GroupBox1.Controls.Add(Me.rd_ativas)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.06993!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(5, 79)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 91)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(182, 265)
+        Me.GroupBox1.Size = New System.Drawing.Size(184, 254)
         Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Parâmetros"
@@ -156,7 +157,7 @@ Partial Class frm_manutencao
         Me.dgv_dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_dados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numero, Me.usuario, Me.status, Me.ativar, Me.bloquear, Me.excluir})
         Me.dgv_dados.GridColor = System.Drawing.Color.White
-        Me.dgv_dados.Location = New System.Drawing.Point(221, 15)
+        Me.dgv_dados.Location = New System.Drawing.Point(221, 22)
         Me.dgv_dados.Margin = New System.Windows.Forms.Padding(2)
         Me.dgv_dados.Name = "dgv_dados"
         Me.dgv_dados.ReadOnly = True
@@ -164,21 +165,23 @@ Partial Class frm_manutencao
         Me.dgv_dados.Size = New System.Drawing.Size(616, 433)
         Me.dgv_dados.TabIndex = 0
         '
-        'excluir
+        'numero
         '
-        Me.excluir.HeaderText = "Excluir"
-        Me.excluir.Image = CType(resources.GetObject("excluir.Image"), System.Drawing.Image)
-        Me.excluir.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.excluir.Name = "excluir"
-        Me.excluir.ReadOnly = True
+        Me.numero.HeaderText = "Número"
+        Me.numero.Name = "numero"
+        Me.numero.ReadOnly = True
         '
-        'bloquear
+        'usuario
         '
-        Me.bloquear.HeaderText = "Bloquear"
-        Me.bloquear.Image = CType(resources.GetObject("bloquear.Image"), System.Drawing.Image)
-        Me.bloquear.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.bloquear.Name = "bloquear"
-        Me.bloquear.ReadOnly = True
+        Me.usuario.HeaderText = "Usuário"
+        Me.usuario.Name = "usuario"
+        Me.usuario.ReadOnly = True
+        '
+        'status
+        '
+        Me.status.HeaderText = "Status conta"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
         '
         'ativar
         '
@@ -190,36 +193,51 @@ Partial Class frm_manutencao
         Me.ativar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ativar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
-        'status
+        'bloquear
         '
-        Me.status.HeaderText = "Status conta"
-        Me.status.Name = "status"
-        Me.status.ReadOnly = True
+        Me.bloquear.HeaderText = "Bloquear"
+        Me.bloquear.Image = CType(resources.GetObject("bloquear.Image"), System.Drawing.Image)
+        Me.bloquear.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.bloquear.Name = "bloquear"
+        Me.bloquear.ReadOnly = True
         '
-        'usuario
+        'excluir
         '
-        Me.usuario.HeaderText = "Usuário"
-        Me.usuario.Name = "usuario"
-        Me.usuario.ReadOnly = True
-        '
-        'numero
-        '
-        Me.numero.HeaderText = "Número"
-        Me.numero.Name = "numero"
-        Me.numero.ReadOnly = True
+        Me.excluir.HeaderText = "Excluir"
+        Me.excluir.Image = CType(resources.GetObject("excluir.Image"), System.Drawing.Image)
+        Me.excluir.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.excluir.Name = "excluir"
+        Me.excluir.ReadOnly = True
         '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox2.AutoSize = True
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.btn_voltar)
         Me.GroupBox2.Controls.Add(Me.dgv_dados)
         Me.GroupBox2.Controls.Add(Me.GroupBox1)
         Me.GroupBox2.Location = New System.Drawing.Point(29, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(854, 459)
+        Me.GroupBox2.Size = New System.Drawing.Size(854, 473)
         Me.GroupBox2.TabIndex = 25
         Me.GroupBox2.TabStop = False
+        '
+        'btn_voltar
+        '
+        Me.btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_voltar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_voltar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.06993!)
+        Me.btn_voltar.Image = CType(resources.GetObject("btn_voltar.Image"), System.Drawing.Image)
+        Me.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_voltar.Location = New System.Drawing.Point(100, 350)
+        Me.btn_voltar.Name = "btn_voltar"
+        Me.btn_voltar.Size = New System.Drawing.Size(89, 39)
+        Me.btn_voltar.TabIndex = 33
+        Me.btn_voltar.Text = "Voltar"
+        Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_voltar.UseVisualStyleBackColor = False
         '
         'frm_manutencao
         '
@@ -261,4 +279,5 @@ Partial Class frm_manutencao
     Friend WithEvents bloquear As DataGridViewImageColumn
     Friend WithEvents excluir As DataGridViewImageColumn
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents btn_voltar As Button
 End Class

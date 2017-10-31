@@ -27,12 +27,12 @@
             rs = db.Execute(sql)
 
             If rs.Fields(7).Value = "Administrador" Then
-                MsgBox("Você não pode editar o Administrador.")
+                MsgBox("Você não pode editar o Administrador.", vbExclamation + vbOKOnly, "Erro")
             Else
                 sql = "UPDATE tb_login SET status_conta='ativa', n_tentativas=3 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_ativas.Checked = True
-                MsgBox("Usuário ativado com sucesso!")
+                MsgBox("Usuário ativado com sucesso!", vbOKOnly, "Concluído")
             End If
 
         ElseIf dgv_dados.CurrentRow.Cells(4).Selected Then
@@ -41,12 +41,12 @@
             rs = db.Execute(sql)
 
             If rs.Fields(7).Value = "Administrador" Then
-                MsgBox("Você não pode editar o Administrador.")
+                MsgBox("Você não pode editar o Administrador.", vbExclamation + vbOKOnly, "Erro")
             Else
                 sql = "UPDATE tb_login SET status_conta='bloqueada', n_tentativas=0 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_bloqueadas.Checked = True
-                MsgBox("Usuário bloqueado com sucesso!")
+                MsgBox("Usuário bloqueado com sucesso!", vbOKOnly, "Concluido")
             End If
 
         ElseIf dgv_dados.CurrentRow.Cells(5).Selected Then
@@ -55,12 +55,12 @@
             rs = db.Execute(sql)
 
             If rs.Fields(7).Value = "Administrador" Then
-                MsgBox("Você não pode editar o Administrador.")
+                MsgBox("Você não pode editar o Administrador.", vbExclamation + vbOKOnly, "Erro")
             Else
                 sql = "DELETE FROM tb_login WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_todas.Checked = True
-                MsgBox("Usuário excluído com sucesso!")
+                MsgBox("Usuário excluído com sucesso!", vbOKOnly, "Concluido")
             End If
 
         End If

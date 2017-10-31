@@ -40,6 +40,7 @@ Partial Class frm_cadastro
         Me.txt_senha = New System.Windows.Forms.MaskedTextBox()
         Me.txt_repetir = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btn_voltar = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -111,12 +112,12 @@ Partial Class frm_cadastro
         Me.cb_visualizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cb_visualizar.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_visualizar.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.cb_visualizar.Location = New System.Drawing.Point(628, 223)
+        Me.cb_visualizar.Location = New System.Drawing.Point(624, 221)
         Me.cb_visualizar.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_visualizar.Name = "cb_visualizar"
-        Me.cb_visualizar.Size = New System.Drawing.Size(83, 42)
+        Me.cb_visualizar.Size = New System.Drawing.Size(85, 42)
         Me.cb_visualizar.TabIndex = 22
-        Me.cb_visualizar.Text = "Visualizar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "senha"
+        Me.cb_visualizar.Text = "Visualizar " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "senha"
         Me.cb_visualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.cb_visualizar.UseVisualStyleBackColor = True
         '
@@ -246,12 +247,29 @@ Partial Class frm_cadastro
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Tag = ""
         '
+        'btn_voltar
+        '
+        Me.btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_voltar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_voltar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.06993!)
+        Me.btn_voltar.Image = CType(resources.GetObject("btn_voltar.Image"), System.Drawing.Image)
+        Me.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_voltar.Location = New System.Drawing.Point(736, 416)
+        Me.btn_voltar.Name = "btn_voltar"
+        Me.btn_voltar.Size = New System.Drawing.Size(89, 39)
+        Me.btn_voltar.TabIndex = 32
+        Me.btn_voltar.Text = "Voltar"
+        Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_voltar.UseVisualStyleBackColor = False
+        '
         'frm_cadastro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(895, 466)
+        Me.Controls.Add(Me.btn_voltar)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -284,4 +302,5 @@ Partial Class frm_cadastro
     Friend WithEvents txt_senha As MaskedTextBox
     Friend WithEvents txt_repetir As MaskedTextBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents btn_voltar As Button
 End Class

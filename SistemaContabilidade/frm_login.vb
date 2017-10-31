@@ -17,16 +17,16 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
         If txt_usuario.Text = Nothing Or txt_senha.Text = Nothing Then
-            MsgBox("Você precisa digitar o usuário e senha!")
+            MsgBox("Você precisa digitar o usuário e senha!", vbInformation + vbOKOnly, "Atenção")
         Else
             sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "' OR email='" & txt_usuario.Text & "'"
             rs = db.Execute(sql)
 
             If rs.EOF = True Then
-                MsgBox("Usuário ou senha está incorreto!")
+                MsgBox("Usuário ou senha está incorreto!", vbInformation + vbOKOnly, "Erro")
             Else
                 If n_tentativas <= 0 Then
-                    MsgBox("Você está bloqueado. Contacte um administrador.")
+                    MsgBox("Você está bloqueado!" + vbNewLine + "Contacte um administrador.", vbExclamation + vbOKOnly, "Número de tentativas excedido!")
                     btn_entrar.Enabled = False
                 Else
                     Dim senhaExata = StrComp(txt_senha.Text, rs.Fields(3).Value, vbBinaryCompare)
@@ -39,10 +39,10 @@
                         If tipo_conta = rs.Fields(7).Value Then
                             frm_menu.Show()
                         Else
-                            MsgBox("Você precisa acessar como " & rs.Fields(7).Value)
+                            MsgBox("Você precisa acessar como " & rs.Fields(7).Value, vbInformation + vbOKOnly, "Atenção")
                         End If
                     Else
-                        MsgBox("Usuário ou senha está incorreto!")
+                        MsgBox("Usuário ou senha está incorreto!", vbInformation + vbOKOnly, "Erro")
 
                         If Not rs.Fields(7).Value = "Administrador" Then
                             n_tentativas = n_tentativas - 1

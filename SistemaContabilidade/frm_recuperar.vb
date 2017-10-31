@@ -10,18 +10,18 @@
 
                 If usuarioExato = 0 Or emailExato = 0 Then
                     If rs.Fields(4).Value = cmb_perguntas.Text And rs.Fields(5).Value = txt_resposta.Text Then
-                        MsgBox("Sua senha é: " & rs.Fields(3).Value)
+                        MsgBox("Sua senha é: " & rs.Fields(3).Value, vbOKOnly, "Recuperar senha concluído")
                     Else
-                        MsgBox("Pergunta secreta ou resposta secreta não correspondem.")
+                        MsgBox("Pergunta secreta ou resposta secreta não correspondem.", vbExclamation + vbOKOnly, "Erro")
                     End If
                 Else
-                    MsgBox("Pergunta secreta ou resposta secreta não correspondem.")
+                    MsgBox("Pergunta secreta ou resposta secreta não correspondem.", vbExclamation + vbOKOnly, "Erro")
                 End If
             Else
-                MsgBox("Usuário ou E-mail não encontrados.")
+                MsgBox("Usuário ou E-mail não encontrados.", vbInformation + vbOKOnly, "Erro")
             End If
         Else
-            MsgBox("Usuário ou resposta secreta não podem estar vazios.")
+            MsgBox("Usuário ou resposta secreta não podem estar vazios.", vbInformation + vbOKOnly, "Atenção")
         End If
     End Sub
 
