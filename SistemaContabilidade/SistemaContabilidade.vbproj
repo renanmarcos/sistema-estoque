@@ -142,9 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +173,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Images\BG3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icones\user-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icones\picture-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icones\WLM_HP_hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icones\browser-window-close-window-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icones\user-search-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

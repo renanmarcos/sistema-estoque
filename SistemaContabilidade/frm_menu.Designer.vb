@@ -22,6 +22,7 @@ Partial Class frm_menu
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_menu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ManutençãoDeContasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CadastroDeContasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,7 +42,7 @@ Partial Class frm_menu
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(701, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(896, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -54,14 +55,18 @@ Partial Class frm_menu
         '
         'CadastroDeContasToolStripMenuItem
         '
+        Me.CadastroDeContasToolStripMenuItem.Image = CType(resources.GetObject("CadastroDeContasToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CadastroDeContasToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.CadastroDeContasToolStripMenuItem.Name = "CadastroDeContasToolStripMenuItem"
-        Me.CadastroDeContasToolStripMenuItem.Size = New System.Drawing.Size(239, 22)
+        Me.CadastroDeContasToolStripMenuItem.Size = New System.Drawing.Size(247, 30)
         Me.CadastroDeContasToolStripMenuItem.Text = "Cadastro de contas"
         '
         'ListarContasAtivasbloqueadasToolStripMenuItem
         '
+        Me.ListarContasAtivasbloqueadasToolStripMenuItem.Image = CType(resources.GetObject("ListarContasAtivasbloqueadasToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ListarContasAtivasbloqueadasToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ListarContasAtivasbloqueadasToolStripMenuItem.Name = "ListarContasAtivasbloqueadasToolStripMenuItem"
-        Me.ListarContasAtivasbloqueadasToolStripMenuItem.Size = New System.Drawing.Size(239, 22)
+        Me.ListarContasAtivasbloqueadasToolStripMenuItem.Size = New System.Drawing.Size(247, 30)
         Me.ListarContasAtivasbloqueadasToolStripMenuItem.Text = "Listar contas ativas/bloqueadas"
         '
         'ClientesToolStripMenuItem
@@ -73,8 +78,9 @@ Partial Class frm_menu
         '
         'CadastroDeClientesToolStripMenuItem
         '
+        Me.CadastroDeClientesToolStripMenuItem.Image = CType(resources.GetObject("CadastroDeClientesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CadastroDeClientesToolStripMenuItem.Name = "CadastroDeClientesToolStripMenuItem"
-        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.CadastroDeClientesToolStripMenuItem.Text = "Cadastro de clientes"
         '
         'EncerrarToolStripMenuItem
@@ -86,30 +92,34 @@ Partial Class frm_menu
         '
         'EncerrarSessãoToolStripMenuItem
         '
+        Me.EncerrarSessãoToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSessãoToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EncerrarSessãoToolStripMenuItem.Name = "EncerrarSessãoToolStripMenuItem"
-        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(168, 30)
         Me.EncerrarSessãoToolStripMenuItem.Text = "Encerrar sessão"
         '
         'EncerrarSistemaToolStripMenuItem
         '
+        Me.EncerrarSistemaToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSistemaToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EncerrarSistemaToolStripMenuItem.Name = "EncerrarSistemaToolStripMenuItem"
-        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(168, 30)
         Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar sistema"
         '
         'frm_menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(701, 321)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(896, 468)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(717, 360)
         Me.Name = "frm_menu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu principal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

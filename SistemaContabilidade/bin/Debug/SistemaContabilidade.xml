@@ -27,5 +27,30 @@ SistemaContabilidade
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaContabilidade.My.Resources.Resources.BG31">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaContabilidade.My.Resources.Resources.browser_window_close_window_icon">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaContabilidade.My.Resources.Resources.user_add_icon">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaContabilidade.My.Resources.Resources.user_search_icon">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaContabilidade.My.Resources.Resources.WLM_HP_hand">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

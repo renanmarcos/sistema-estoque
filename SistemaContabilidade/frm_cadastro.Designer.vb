@@ -250,7 +250,7 @@ Partial Class frm_cadastro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.SistemaContabilidade.My.Resources.Resources.BG3
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(895, 466)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

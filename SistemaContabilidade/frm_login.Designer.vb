@@ -127,7 +127,7 @@ Partial Class frm_login
         'txt_senha
         '
         Me.txt_senha.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_senha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txt_senha.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txt_senha.Location = New System.Drawing.Point(91, 143)
         Me.txt_senha.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_senha.Name = "txt_senha"
@@ -138,7 +138,7 @@ Partial Class frm_login
         'txt_usuario
         '
         Me.txt_usuario.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_usuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txt_usuario.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txt_usuario.Location = New System.Drawing.Point(91, 78)
         Me.txt_usuario.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_usuario.Name = "txt_usuario"
@@ -185,7 +185,7 @@ Partial Class frm_login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.BackgroundImage = Global.SistemaContabilidade.My.Resources.Resources.BG3
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(896, 468)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

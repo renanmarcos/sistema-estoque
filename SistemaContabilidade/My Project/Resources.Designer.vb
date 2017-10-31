@@ -69,5 +69,55 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property BG31() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BG31", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property browser_window_close_window_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("browser-window-close-window-icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property user_add_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("user-add-icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property user_search_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("user-search-icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property WLM_HP_hand() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("WLM_HP_hand", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace
