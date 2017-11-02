@@ -38,6 +38,9 @@
 
                         If tipo_conta = rs.Fields(7).Value Then
                             frm_menu.Show()
+                            txt_senha.Clear()
+                            txt_usuario.Clear()
+                            cmb_nivel.SelectedIndex = 0
                         Else
                             MsgBox("Você precisa acessar como " & rs.Fields(7).Value, vbInformation + vbOKOnly, "Atenção")
                         End If

@@ -38,4 +38,9 @@
 
         cmb_perguntas.SelectedIndex = 0
     End Sub
+
+    Private Sub btn_voltar_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
+        Me.Close()
+        frm_menu.Show()
+    End Sub
 End Class
