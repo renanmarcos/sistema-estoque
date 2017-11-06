@@ -82,6 +82,12 @@
     <Compile Include="frm_cadastro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_digitacao.Designer.vb">
+      <DependentUpon>frm_digitacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_digitacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -101,10 +107,22 @@
     <Compile Include="frm_menu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_planoContas.Designer.vb">
+      <DependentUpon>frm_planoContas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_planoContas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_recuperar.Designer.vb">
       <DependentUpon>frm_recuperar.vb</DependentUpon>
     </Compile>
     <Compile Include="frm_recuperar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_relatorio.Designer.vb">
+      <DependentUpon>frm_relatorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_relatorio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modulo_principal.vb" />
@@ -128,6 +146,9 @@
     <EmbeddedResource Include="frm_cadastro.resx">
       <DependentUpon>frm_cadastro.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_digitacao.resx">
+      <DependentUpon>frm_digitacao.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.vb</DependentUpon>
     </EmbeddedResource>
@@ -137,8 +158,14 @@
     <EmbeddedResource Include="frm_menu.resx">
       <DependentUpon>frm_menu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_planoContas.resx">
+      <DependentUpon>frm_planoContas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_recuperar.resx">
       <DependentUpon>frm_recuperar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_relatorio.resx">
+      <DependentUpon>frm_relatorio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

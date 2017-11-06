@@ -100,3 +100,6 @@ C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaConta
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_digitacao.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_planoContas.resources
+C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_relatorio.resources
