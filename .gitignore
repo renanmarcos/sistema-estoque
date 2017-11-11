@@ -11,6 +11,9 @@ x64/
 x86/
 bld/
 [Bb]in/
+!SistemaContabilidade\bin\Debug\banco
+!SistemaContabilidade\bin\Debug\icones
+!SistemaContabilidade\bin\Debug\Images
 [Oo]bj/
 [Ll]og/
 .vs/
