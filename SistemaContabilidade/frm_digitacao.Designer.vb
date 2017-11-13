@@ -22,29 +22,29 @@ Partial Class frm_digitacao
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_debito = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txt_credito = New System.Windows.Forms.TextBox()
+        Me.txt_nome = New System.Windows.Forms.TextBox()
+        Me.txt_desc = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txt_quant = New System.Windows.Forms.TextBox()
+        Me.txt_valor_unitario = New System.Windows.Forms.TextBox()
+        Me.txt_valor_total = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txt_debito
         '
-        Me.TextBox1.Location = New System.Drawing.Point(211, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(326, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txt_debito.Location = New System.Drawing.Point(211, 58)
+        Me.txt_debito.Name = "txt_debito"
+        Me.txt_debito.Size = New System.Drawing.Size(326, 20)
+        Me.txt_debito.TabIndex = 0
         '
         'Label1
         '
@@ -64,27 +64,27 @@ Partial Class frm_digitacao
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Crédito:"
         '
-        'TextBox2
+        'txt_credito
         '
-        Me.TextBox2.Location = New System.Drawing.Point(211, 84)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(326, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.txt_credito.Location = New System.Drawing.Point(211, 84)
+        Me.txt_credito.Name = "txt_credito"
+        Me.txt_credito.Size = New System.Drawing.Size(326, 20)
+        Me.txt_credito.TabIndex = 2
         '
-        'TextBox3
+        'txt_nome
         '
-        Me.TextBox3.Location = New System.Drawing.Point(211, 146)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(326, 20)
-        Me.TextBox3.TabIndex = 4
+        Me.txt_nome.Location = New System.Drawing.Point(211, 146)
+        Me.txt_nome.Name = "txt_nome"
+        Me.txt_nome.Size = New System.Drawing.Size(326, 20)
+        Me.txt_nome.TabIndex = 4
         '
-        'TextBox4
+        'txt_desc
         '
-        Me.TextBox4.Location = New System.Drawing.Point(211, 172)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(326, 136)
-        Me.TextBox4.TabIndex = 5
+        Me.txt_desc.Location = New System.Drawing.Point(211, 172)
+        Me.txt_desc.Multiline = True
+        Me.txt_desc.Name = "txt_desc"
+        Me.txt_desc.Size = New System.Drawing.Size(326, 136)
+        Me.txt_desc.TabIndex = 5
         '
         'Label3
         '
@@ -104,31 +104,31 @@ Partial Class frm_digitacao
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Descrição da mercadoria"
         '
-        'TextBox5
+        'txt_quant
         '
-        Me.TextBox5.Location = New System.Drawing.Point(227, 331)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(77, 59)
-        Me.TextBox5.TabIndex = 8
+        Me.txt_quant.Location = New System.Drawing.Point(227, 331)
+        Me.txt_quant.Multiline = True
+        Me.txt_quant.Name = "txt_quant"
+        Me.txt_quant.Size = New System.Drawing.Size(77, 59)
+        Me.txt_quant.TabIndex = 8
         '
-        'TextBox6
+        'txt_valor_unitario
         '
-        Me.TextBox6.Location = New System.Drawing.Point(328, 331)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(77, 59)
-        Me.TextBox6.TabIndex = 9
+        Me.txt_valor_unitario.Location = New System.Drawing.Point(328, 331)
+        Me.txt_valor_unitario.Multiline = True
+        Me.txt_valor_unitario.Name = "txt_valor_unitario"
+        Me.txt_valor_unitario.Size = New System.Drawing.Size(77, 59)
+        Me.txt_valor_unitario.TabIndex = 9
         '
-        'TextBox7
+        'txt_valor_total
         '
-        Me.TextBox7.Enabled = False
-        Me.TextBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.TextBox7.Location = New System.Drawing.Point(429, 331)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(77, 59)
-        Me.TextBox7.TabIndex = 10
+        Me.txt_valor_total.Enabled = False
+        Me.txt_valor_total.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_valor_total.Location = New System.Drawing.Point(429, 331)
+        Me.txt_valor_total.Multiline = True
+        Me.txt_valor_total.Name = "txt_valor_total"
+        Me.txt_valor_total.Size = New System.Drawing.Size(77, 59)
+        Me.txt_valor_total.TabIndex = 10
         '
         'Label5
         '
@@ -175,17 +175,17 @@ Partial Class frm_digitacao
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txt_valor_total)
+        Me.Controls.Add(Me.txt_valor_unitario)
+        Me.Controls.Add(Me.txt_quant)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txt_desc)
+        Me.Controls.Add(Me.txt_nome)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txt_credito)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_debito)
         Me.Name = "frm_digitacao"
         Me.Text = "Tela de lançamento"
         Me.ResumeLayout(False)
@@ -193,17 +193,17 @@ Partial Class frm_digitacao
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_debito As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txt_credito As TextBox
+    Friend WithEvents txt_nome As TextBox
+    Friend WithEvents txt_desc As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txt_quant As TextBox
+    Friend WithEvents txt_valor_unitario As TextBox
+    Friend WithEvents txt_valor_total As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label

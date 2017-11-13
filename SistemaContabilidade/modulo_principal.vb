@@ -27,4 +27,46 @@
             Loop
         End With
     End Sub
+    Sub Limpar()
+        With frm_cadastro
+            .txt_email.Clear()
+            .txt_repetir.Clear()
+            .txt_resposta.Clear()
+            .txt_senha.Clear()
+            .txt_usuario.Clear()
+            .cmb_perguntas.Text = Nothing
+            .cmb_tipo.Text = Nothing
+            .cb_visualizar.Checked = False
+        End With
+        With frm_login
+            .txt_senha.Clear()
+            .txt_usuario.Clear()
+            .cmb_nivel.Text = Nothing
+        End With
+        With frm_digitacao
+            .txt_credito.Clear()
+            .txt_debito.Clear()
+            .txt_desc.Clear()
+            .txt_nome.Clear()
+            .txt_quant.Clear()
+            .txt_valor_total.Clear()
+            .txt_valor_unitario.Clear()
+        End With
+        With frm_manutencao
+            .txt_parametros.Clear()
+            .cmb_selecione.Text = Nothing
+            .rd_ativas.Checked = False
+            .rd_bloqueadas.Checked = False
+            .rd_todas.Checked = False
+        End With
+        With frm_recuperar
+            .txt_resposta.Clear()
+            .txt_usuario.Clear()
+            .cmb_perguntas.Text = Nothing
+        End With
+        With frm_relatorio
+            .cmb_metodo.Text = Nothing
+            .cb_inicio.Checked = False
+        End With
+    End Sub
 End Module
