@@ -19,7 +19,11 @@
         If txt_usuario.Text = Nothing Or txt_senha.Text = Nothing Then
             MsgBox("Você precisa digitar o usuário e senha!", vbInformation + vbOKOnly, "Atenção")
         Else
-            sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "' OR email='" & txt_usuario.Text & "'"
+            sql = "SELECT cnpj, nome_fantasia, razao_social, categoria, usuario, email, senha, pergunta_secreta, " &
+            "resposta_secreta, tipo_conta, n_tentativas, tb_login.id_usuario FROM tb_login " &
+            "INNER JOIN tb_empresa ON tb_login.id_usuario = tb_empresa.id_usuario " &
+            "WHERE usuario='" & txt_usuario.Text & "' OR email='" & txt_usuario.Text & "'"
+
             rs = db.Execute(sql)
 
             If rs.EOF = True Then
@@ -29,31 +33,35 @@
                     MsgBox("Você está bloqueado!" + vbNewLine + "Contacte um administrador.", vbExclamation + vbOKOnly, "Número de tentativas excedido!")
                     btn_entrar.Enabled = False
                 Else
-                    Dim senhaExata = StrComp(txt_senha.Text, rs.Fields(3).Value, vbBinaryCompare)
-                    Dim usuarioExato = StrComp(txt_usuario.Text, rs.Fields(1).Value, vbBinaryCompare)
-                    Dim emailExato = StrComp(txt_usuario.Text, rs.Fields(2).Value, vbBinaryCompare)
+                    Dim senhaExata = StrComp(txt_senha.Text, rs.Fields("senha").Value, vbBinaryCompare)
+                    Dim usuarioExato = StrComp(txt_usuario.Text, rs.Fields("usuario").Value, vbBinaryCompare)
+                    Dim emailExato = StrComp(txt_usuario.Text, rs.Fields("email").Value, vbBinaryCompare)
 
                     If senhaExata = 0 And (usuarioExato = 0 Or emailExato = 0) Then
                         tipo_conta = cmb_nivel.Text
 
-                        If tipo_conta = rs.Fields(7).Value Then
+                        If tipo_conta = rs.Fields("tipo_conta").Value Then
+                            cnpj = rs.Fields("cnpj").Value
+                            nome_fantasia = rs.Fields("nome_fantasia").Value
                             frm_menu.Show()
                             txt_senha.Clear()
                             txt_usuario.Clear()
                             cmb_nivel.SelectedIndex = 0
                         Else
-                            MsgBox("Você precisa acessar como " & rs.Fields(7).Value, vbInformation + vbOKOnly, "Atenção")
+                            MsgBox("Você precisa acessar como " & rs.Fields("tipo_conta").Value, vbInformation + vbOKOnly, "Atenção")
                         End If
                     Else
                         MsgBox("Usuário ou senha está incorreto!", vbInformation + vbOKOnly, "Erro")
 
-                        If Not rs.Fields(7).Value = "Administrador" Then
+                        If Not rs.Fields("tipo_conta").Value = "Administrador" Then
                             n_tentativas = n_tentativas - 1
-                            sql = "UPDATE tb_login SET n_tentativas =" & n_tentativas & ", status_conta='bloqueada' WHERE id_usuario = " & rs.Fields(0).Value & ""
+                            sql = "UPDATE tb_login SET n_tentativas =" & n_tentativas & " WHERE id_usuario = " & rs.Fields("id_usuario").Value & ""
                             db.Execute(sql)
                             lbl_tentativas.Text = n_tentativas
 
                             If n_tentativas = 0 Then
+                                sql = "UPDATE tb_login SET status_conta='bloqueada' WHERE id_usuario=" & rs.Fields("id_usuario").Value & ""
+                                db.Execute(sql)
                                 btn_entrar.Enabled = False
                             End If
                         End If
@@ -68,8 +76,8 @@
         rs = db.Execute(sql)
 
         If rs.EOF = False Then
-            lbl_tentativas.Text = rs.Fields(8).Value.ToString
-            n_tentativas = rs.Fields(8).Value
+            lbl_tentativas.Text = rs.Fields("n_tentativas").Value.ToString
+            n_tentativas = rs.Fields("n_tentativas").Value
 
             If n_tentativas <= 0 Then
                 btn_entrar.Enabled = False

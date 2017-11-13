@@ -24,5 +24,11 @@
         If tipo_conta = "Usuário" Then
             ManutençãoDeContasToolStripMenuItem.Visible = False
         End If
+        lbl_empresa.Text = "Empresa: " & nome_fantasia
+        lbl_cnpj.Text = "CNPJ: " & cnpj
+    End Sub
+
+    Private Sub PlanoDeContasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlanoDeContasToolStripMenuItem.Click
+        frm_planoContas.Show()
     End Sub
 End Class

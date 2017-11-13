@@ -3,14 +3,14 @@
 *.userosscache
 *.sln.docstates
 *.userprefs
-[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
+*.exe
+*.pdb
 [Rr]eleases/
 x64/
 x86/
 bld/
-[Bb]in/
 [Oo]bj/
 [Ll]og/
 .vs/
