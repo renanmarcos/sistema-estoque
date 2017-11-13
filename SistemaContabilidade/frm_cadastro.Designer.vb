@@ -23,7 +23,6 @@ Partial Class frm_cadastro
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_cadastro))
-        Me.txt_email = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_usuario = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,28 +40,20 @@ Partial Class frm_cadastro
         Me.txt_repetir = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_voltar = New System.Windows.Forms.Button()
+        Me.txt_cnpj = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'txt_email
-        '
-        Me.txt_email.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
-        Me.txt_email.Location = New System.Drawing.Point(24, 104)
-        Me.txt_email.Margin = New System.Windows.Forms.Padding(2)
-        Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(715, 32)
-        Me.txt_email.TabIndex = 17
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Label3.Location = New System.Drawing.Point(19, 73)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 29)
+        Me.Label3.Size = New System.Drawing.Size(76, 29)
         Me.Label3.TabIndex = 16
-        Me.Label3.Text = "E-mail"
+        Me.Label3.Text = "CNPJ"
         '
         'txt_usuario
         '
@@ -76,33 +67,33 @@ Partial Class frm_cadastro
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Label2.Location = New System.Drawing.Point(19, 8)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(147, 29)
+        Me.Label2.Size = New System.Drawing.Size(215, 29)
         Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Nome do usuário"
+        Me.Label2.Text = "Nome da Empresa"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Label1.Location = New System.Drawing.Point(19, 138)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 29)
+        Me.Label1.Size = New System.Drawing.Size(82, 29)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Senha"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Label4.Location = New System.Drawing.Point(248, 138)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(126, 29)
+        Me.Label4.Size = New System.Drawing.Size(163, 29)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Repetir senha"
         '
@@ -110,12 +101,12 @@ Partial Class frm_cadastro
         '
         Me.cb_visualizar.AutoSize = True
         Me.cb_visualizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cb_visualizar.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cb_visualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_visualizar.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.cb_visualizar.Location = New System.Drawing.Point(624, 221)
         Me.cb_visualizar.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_visualizar.Name = "cb_visualizar"
-        Me.cb_visualizar.Size = New System.Drawing.Size(85, 42)
+        Me.cb_visualizar.Size = New System.Drawing.Size(100, 44)
         Me.cb_visualizar.TabIndex = 22
         Me.cb_visualizar.Text = "Visualizar " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "senha"
         Me.cb_visualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -124,11 +115,11 @@ Partial Class frm_cadastro
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Label5.Location = New System.Drawing.Point(19, 210)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(156, 29)
+        Me.Label5.Size = New System.Drawing.Size(195, 29)
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "Pergunta secreta"
         '
@@ -159,11 +150,11 @@ Partial Class frm_cadastro
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Label6.Location = New System.Drawing.Point(475, 138)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(120, 29)
+        Me.Label6.Size = New System.Drawing.Size(161, 29)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "Tipo de conta"
         '
@@ -179,11 +170,11 @@ Partial Class frm_cadastro
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Label7.Location = New System.Drawing.Point(24, 276)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(155, 29)
+        Me.Label7.Size = New System.Drawing.Size(200, 29)
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Resposta secreta"
         '
@@ -191,7 +182,7 @@ Partial Class frm_cadastro
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Font = New System.Drawing.Font("Bebas Neue", 18.0!)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.Button1.Location = New System.Drawing.Point(606, 276)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
@@ -222,13 +213,13 @@ Partial Class frm_cadastro
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox2.BackColor = System.Drawing.Color.White
+        Me.GroupBox2.Controls.Add(Me.txt_cnpj)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.txt_repetir)
         Me.GroupBox2.Controls.Add(Me.txt_usuario)
         Me.GroupBox2.Controls.Add(Me.txt_senha)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.txt_email)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.txt_resposta)
@@ -238,7 +229,7 @@ Partial Class frm_cadastro
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.cmb_perguntas)
-        Me.GroupBox2.Font = New System.Drawing.Font("Bebas Neue", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.GroupBox2.Location = New System.Drawing.Point(68, 54)
         Me.GroupBox2.Name = "GroupBox2"
@@ -263,6 +254,13 @@ Partial Class frm_cadastro
         Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_voltar.UseVisualStyleBackColor = False
         '
+        'txt_cnpj
+        '
+        Me.txt_cnpj.Location = New System.Drawing.Point(24, 97)
+        Me.txt_cnpj.Name = "txt_cnpj"
+        Me.txt_cnpj.Size = New System.Drawing.Size(465, 38)
+        Me.txt_cnpj.TabIndex = 32
+        '
         'frm_cadastro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -284,8 +282,6 @@ Partial Class frm_cadastro
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents txt_email As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_usuario As TextBox
     Friend WithEvents Label2 As Label
@@ -303,4 +299,5 @@ Partial Class frm_cadastro
     Friend WithEvents txt_repetir As MaskedTextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btn_voltar As Button
+    Friend WithEvents txt_cnpj As MaskedTextBox
 End Class

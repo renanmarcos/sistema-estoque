@@ -30,7 +30,7 @@
     End Sub
     Sub Limpar()
         With frm_cadastro
-            .txt_email.Clear()
+            .txt_cnpj.Clear()
             .txt_repetir.Clear()
             .txt_resposta.Clear()
             .txt_senha.Clear()

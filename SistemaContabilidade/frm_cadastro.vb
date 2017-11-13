@@ -1,4 +1,5 @@
 ﻿Public Class frm_cadastro
+    Dim objeto As New Valida_CPF_CNPJ
     Private Sub frm_cadastro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With cmb_perguntas.Items
             .Add("Qual é o segundo nome da mãe?")
@@ -29,16 +30,24 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If txt_usuario.Text = Nothing Or txt_email.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_resposta.Text = Nothing Then
+        If txt_usuario.Text = Nothing Or txt_cnpj.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_resposta.Text = Nothing Then
             MsgBox("Todos os campos precisam ser preenchidos.", vbInformation + vbOKOnly, "Atenção")
         Else
+            If txt_cnpj.TextLength = 14 Then
+                txt_cnpj.Mask = "00.000.000/0000-00"
+                objeto.cnpj = txt_cnpj.Text
+                If objeto.isCnpjValido = False Then
+                    MessageBox.Show("CNPJ Iválido!", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Exit Sub
+                End If
+            End If
             If StrComp(txt_senha.Text, txt_repetir.Text, vbBinaryCompare) = 0 Then
                 sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "'"
                 rs = db.Execute(sql)
 
                 If rs.EOF = True Then
                     sql = "INSERT INTO tb_login (usuario, email, senha, pergunta_secreta, resposta_secreta, status_conta, tipo_conta, n_tentativas) VALUES ('" & txt_usuario.Text & "', '" _
-                      & txt_email.Text & "', '" & txt_senha.Text & "', '" & cmb_perguntas.Text & "', '" _
+                      & txt_cnpj.Text & "', '" & txt_senha.Text & "', '" & cmb_perguntas.Text & "', '" _
                       & txt_resposta.Text & "', 'ativa', '" & cmb_tipo.Text & "', 3)"
                     db.Execute(sql)
                     MsgBox("Usuário cadastrado com sucesso!", vbOKOnly, "Concluído")
