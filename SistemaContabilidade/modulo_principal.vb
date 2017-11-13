@@ -44,14 +44,16 @@
             .txt_usuario.Clear()
             .cmb_nivel.Text = Nothing
         End With
-        With frm_digitacao
-            .txt_credito.Clear()
-            .txt_debito.Clear()
-            .txt_desc.Clear()
-            .txt_nome.Clear()
-            .txt_quant.Clear()
-            .txt_valor_total.Clear()
-            .txt_valor_unitario.Clear()
+        With frm_planoContas
+            .txt_desc_ativo.Clear()
+            .txt_desc_passivo.Clear()
+            .txt_nome_ativo.Clear()
+            .txt_nome_passivo.Clear()
+            .txt_qtd_ativo.Clear()
+            .txt_vtotal_ativo.Clear()
+            .txt_vunit_ativo.Clear()
+            .cmb_tipo_ativo.Text = Nothing
+            .cmb_tipo_passivo.Text = Nothing
         End With
         With frm_manutencao
             .txt_parametros.Clear()
