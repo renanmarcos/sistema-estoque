@@ -32,10 +32,9 @@
         With frm_cadastro
             .txt_cnpj.Clear()
             .txt_repetir.Clear()
-            .txt_resposta.Clear()
+            .txt_razao.Clear()
             .txt_senha.Clear()
             .txt_usuario.Clear()
-            .cmb_perguntas.Text = Nothing
             .cmb_tipo.Text = Nothing
             .cb_visualizar.Checked = False
         End With

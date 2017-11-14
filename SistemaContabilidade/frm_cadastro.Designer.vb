@@ -29,18 +29,16 @@ Partial Class frm_cadastro
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cb_visualizar = New System.Windows.Forms.CheckBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cmb_perguntas = New System.Windows.Forms.ComboBox()
-        Me.cmb_tipo = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txt_resposta = New System.Windows.Forms.TextBox()
+        Me.txt_razao = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txt_senha = New System.Windows.Forms.MaskedTextBox()
         Me.txt_repetir = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btn_voltar = New System.Windows.Forms.Button()
         Me.txt_cnpj = New System.Windows.Forms.MaskedTextBox()
+        Me.btn_voltar = New System.Windows.Forms.Button()
+        Me.cmb_tipo = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,7 +59,7 @@ Partial Class frm_cadastro
         Me.txt_usuario.Location = New System.Drawing.Point(24, 39)
         Me.txt_usuario.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_usuario.Name = "txt_usuario"
-        Me.txt_usuario.Size = New System.Drawing.Size(715, 32)
+        Me.txt_usuario.Size = New System.Drawing.Size(446, 32)
         Me.txt_usuario.TabIndex = 15
         '
         'Label2
@@ -103,7 +101,7 @@ Partial Class frm_cadastro
         Me.cb_visualizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cb_visualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_visualizar.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.cb_visualizar.Location = New System.Drawing.Point(624, 221)
+        Me.cb_visualizar.Location = New System.Drawing.Point(497, 157)
         Me.cb_visualizar.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_visualizar.Name = "cb_visualizar"
         Me.cb_visualizar.Size = New System.Drawing.Size(100, 44)
@@ -112,78 +110,32 @@ Partial Class frm_cadastro
         Me.cb_visualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.cb_visualizar.UseVisualStyleBackColor = True
         '
-        'Label5
+        'txt_razao
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
-        Me.Label5.Location = New System.Drawing.Point(19, 210)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(195, 29)
-        Me.Label5.TabIndex = 23
-        Me.Label5.Text = "Pergunta secreta"
-        '
-        'cmb_perguntas
-        '
-        Me.cmb_perguntas.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmb_perguntas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_perguntas.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
-        Me.cmb_perguntas.FormattingEnabled = True
-        Me.cmb_perguntas.Location = New System.Drawing.Point(24, 241)
-        Me.cmb_perguntas.Margin = New System.Windows.Forms.Padding(2)
-        Me.cmb_perguntas.Name = "cmb_perguntas"
-        Me.cmb_perguntas.Size = New System.Drawing.Size(552, 33)
-        Me.cmb_perguntas.TabIndex = 24
-        '
-        'cmb_tipo
-        '
-        Me.cmb_tipo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmb_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_tipo.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
-        Me.cmb_tipo.FormattingEnabled = True
-        Me.cmb_tipo.Location = New System.Drawing.Point(480, 169)
-        Me.cmb_tipo.Margin = New System.Windows.Forms.Padding(2)
-        Me.cmb_tipo.Name = "cmb_tipo"
-        Me.cmb_tipo.Size = New System.Drawing.Size(259, 33)
-        Me.cmb_tipo.TabIndex = 26
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
-        Me.Label6.Location = New System.Drawing.Point(475, 138)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(161, 29)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Tipo de conta"
-        '
-        'txt_resposta
-        '
-        Me.txt_resposta.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
-        Me.txt_resposta.Location = New System.Drawing.Point(24, 307)
-        Me.txt_resposta.Margin = New System.Windows.Forms.Padding(2)
-        Me.txt_resposta.Name = "txt_resposta"
-        Me.txt_resposta.Size = New System.Drawing.Size(552, 32)
-        Me.txt_resposta.TabIndex = 27
+        Me.txt_razao.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
+        Me.txt_razao.Location = New System.Drawing.Point(24, 256)
+        Me.txt_razao.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_razao.Name = "txt_razao"
+        Me.txt_razao.Size = New System.Drawing.Size(446, 32)
+        Me.txt_razao.TabIndex = 27
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
-        Me.Label7.Location = New System.Drawing.Point(24, 276)
+        Me.Label7.Location = New System.Drawing.Point(19, 214)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(200, 29)
+        Me.Label7.Size = New System.Drawing.Size(154, 29)
         Me.Label7.TabIndex = 28
-        Me.Label7.Text = "Resposta secreta"
+        Me.Label7.Text = "Razão Social"
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
-        Me.Button1.Location = New System.Drawing.Point(606, 276)
+        Me.Button1.Location = New System.Drawing.Point(24, 301)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 50)
@@ -213,6 +165,8 @@ Partial Class frm_cadastro
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox2.BackColor = System.Drawing.Color.White
+        Me.GroupBox2.Controls.Add(Me.cmb_tipo)
+        Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.txt_cnpj)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.txt_repetir)
@@ -222,21 +176,24 @@ Partial Class frm_cadastro
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.txt_resposta)
+        Me.GroupBox2.Controls.Add(Me.txt_razao)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.cmb_tipo)
         Me.GroupBox2.Controls.Add(Me.cb_visualizar)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.cmb_perguntas)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Highlight
         Me.GroupBox2.Location = New System.Drawing.Point(68, 54)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(757, 356)
+        Me.GroupBox2.Size = New System.Drawing.Size(793, 356)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Tag = ""
+        '
+        'txt_cnpj
+        '
+        Me.txt_cnpj.Location = New System.Drawing.Point(24, 97)
+        Me.txt_cnpj.Name = "txt_cnpj"
+        Me.txt_cnpj.Size = New System.Drawing.Size(446, 38)
+        Me.txt_cnpj.TabIndex = 32
         '
         'btn_voltar
         '
@@ -254,12 +211,28 @@ Partial Class frm_cadastro
         Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_voltar.UseVisualStyleBackColor = False
         '
-        'txt_cnpj
+        'cmb_tipo
         '
-        Me.txt_cnpj.Location = New System.Drawing.Point(24, 97)
-        Me.txt_cnpj.Name = "txt_cnpj"
-        Me.txt_cnpj.Size = New System.Drawing.Size(465, 38)
-        Me.txt_cnpj.TabIndex = 32
+        Me.cmb_tipo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmb_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_tipo.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
+        Me.cmb_tipo.FormattingEnabled = True
+        Me.cmb_tipo.Location = New System.Drawing.Point(498, 39)
+        Me.cmb_tipo.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmb_tipo.Name = "cmb_tipo"
+        Me.cmb_tipo.Size = New System.Drawing.Size(259, 33)
+        Me.cmb_tipo.TabIndex = 34
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.Label6.Location = New System.Drawing.Point(492, 8)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(260, 29)
+        Me.Label6.TabIndex = 33
+        Me.Label6.Text = "Segmento da Empresa"
         '
         'frm_cadastro
         '
@@ -288,11 +261,7 @@ Partial Class frm_cadastro
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents cb_visualizar As CheckBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents cmb_perguntas As ComboBox
-    Friend WithEvents cmb_tipo As ComboBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents txt_resposta As TextBox
+    Friend WithEvents txt_razao As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents txt_senha As MaskedTextBox
@@ -300,4 +269,6 @@ Partial Class frm_cadastro
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btn_voltar As Button
     Friend WithEvents txt_cnpj As MaskedTextBox
+    Friend WithEvents cmb_tipo As ComboBox
+    Friend WithEvents Label6 As Label
 End Class
