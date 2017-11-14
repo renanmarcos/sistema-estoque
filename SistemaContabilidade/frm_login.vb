@@ -8,6 +8,17 @@
         cmb_nivel.SelectedIndex = 0
         txt_usuario.Focus()
         conecta_banco()
+
+        Dim privateFonts As New System.Drawing.Text.PrivateFontCollection()
+        privateFonts.AddFontFile(Application.StartupPath & "\Fontes\BebasNeue.otf")
+        Dim font As New System.Drawing.Font(privateFonts.Families(0), 18)
+        Dim font2 As New System.Drawing.Font(privateFonts.Families(0), 15)
+        Dim font3 As New System.Drawing.Font(privateFonts.Families(0), 25)
+        GroupBox1.Font = font2
+        btn_entrar.Font = font3
+        Label2.Font = font
+        Label3.Font = font
+        Label4.Font = font
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_esqueceu.LinkClicked
