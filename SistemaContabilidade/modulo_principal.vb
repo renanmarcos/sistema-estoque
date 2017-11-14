@@ -34,7 +34,7 @@
             .txt_repetir.Clear()
             .txt_razao.Clear()
             .txt_senha.Clear()
-            .txt_usuario.Clear()
+            .txt_nome.Clear()
             .cmb_tipo.Text = Nothing
             .cb_visualizar.Checked = False
         End With

@@ -11,6 +11,15 @@
             .Add("Educação")
         End With
         cmb_tipo.SelectedIndex = 0
+        With cmb_perguntas.Items
+            .Add("Qual é o segundo nome da mãe?")
+            .Add("Primeira escola que estudou?")
+            .Add("Qual era o nome do seu primeiro animal de estimação?")
+            .Add("Qual é a sua comida favorita?")
+            .Add("Qual é a profissão do seu avô?")
+            .Add("Nome da empresa do seu primeiro emprego?")
+        End With
+        cmb_perguntas.SelectedIndex = 0
         conecta_banco()
     End Sub
 
@@ -25,27 +34,33 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If txt_usuario.Text = Nothing Or txt_cnpj.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_razao.Text = Nothing Then
+        If txt_nome.Text = Nothing Or txt_cnpj.MaskCompleted = False Or txt_usuario.Text = Nothing Or txt_email.Text = Nothing Or txt_resposta.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_razao.Text = Nothing Then
             MsgBox("Todos os campos precisam ser preenchidos.", vbInformation + vbOKOnly, "Atenção")
         Else
-            If txt_cnpj.TextLength = 14 Then
-                txt_cnpj.Mask = "00.000.000/0000-00"
-                objeto.cnpj = txt_cnpj.Text
-                If objeto.isCnpjValido = False Then
-                    MessageBox.Show("CNPJ Iválido!", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Exit Sub
-                End If
+
+            objeto.cnpj = txt_cnpj.Text
+
+            If objeto.isCnpjValido = False Then
+                MessageBox.Show("CNPJ Iválido!", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
             End If
+
             If StrComp(txt_senha.Text, txt_repetir.Text, vbBinaryCompare) = 0 Then
                 Verifica_ID()
-                sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "'"
+                sql = "SELECT * FROM tb_login WHERE usuario='" & txt_nome.Text & "'"
                 rs = db.Execute(sql)
 
                 If rs.EOF = True Then
-                    sql = "INSERT INTO tb_empresa (cnpj, id_usuario, nome_fantasia, razao_social, categoria, senha) VALUES ('" & txt_cnpj.Text & "', " _
-                      & id & ", '" & txt_razao.Text & "', '" & cmb_tipo.Text & "', '" _
-                      & txt_senha.Text & "')"
+                    sql = "INSERT INTO tb_empresa VALUES ('" & txt_cnpj.Text & "', " _
+                      & id & ", '" & txt_nome.Text & "' ,'" & txt_razao.Text & "', '" & cmb_tipo.Text & "')"
                     db.Execute(sql)
+
+                    sql = "INSERT INTO tb_login (id_usuario, usuario, email, senha, pergunta_secreta, resposta_secreta)" &
+                          "VALUES ('" & id & "', '" & txt_usuario.Text & "', " &
+                          "'" & txt_email.Text & "', '" & txt_senha.Text & "', '" & cmb_perguntas.Text & "'," &
+                          "'" & txt_resposta.Text & "')"
+                    db.Execute(sql)
+
                     MsgBox("Usuário cadastrado com sucesso!", vbOKOnly, "Concluído")
                 Else
                     MsgBox("Usuário já cadastrado no sistema.", vbInformation + vbOKOnly, "Erro")
@@ -61,13 +76,13 @@
         frm_menu.Show()
     End Sub
     Sub Verifica_ID()
-        sql = "select MAX (id_usuario) as id from tb_login"
+        sql = "SELECT MAX (id_usuario) AS id FROM tb_login"
         rs = db.Execute(sql)
+
         If rs.BOF = True Then
             id = 1
         Else
             id = rs.Fields(0).Value + 1
         End If
     End Sub
-
 End Class
