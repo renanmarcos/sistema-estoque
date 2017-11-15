@@ -208,13 +208,13 @@
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="ADODB">
-      <Guid>{00000206-0000-0010-8000-00AA006D2EA4}</Guid>
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
       <VersionMajor>2</VersionMajor>
-      <VersionMinor>6</VersionMinor>
+      <VersionMinor>8</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
+      <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

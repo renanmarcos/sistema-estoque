@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.SistemaContabilidade.frm_cadastro
+            Me.MainForm = Global.SistemaContabilidade.frm_login
         End Sub
     End Class
 End Namespace
