@@ -62,6 +62,7 @@
                     db.Execute(sql)
 
                     MsgBox("Usuário cadastrado com sucesso!", vbOKOnly, "Concluído")
+                    Limpar()
                 Else
                     MsgBox("Usuário já cadastrado no sistema.", vbInformation + vbOKOnly, "Erro")
                 End If
