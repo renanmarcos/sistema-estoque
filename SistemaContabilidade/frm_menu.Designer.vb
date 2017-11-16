@@ -29,13 +29,15 @@ Partial Class frm_menu
         Me.ListarContasAtivasbloqueadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CadastroDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PlanoDeContasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarSessãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncerrarSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lbl_empresa = New System.Windows.Forms.Label()
         Me.lbl_cnpj = New System.Windows.Forms.Label()
-        Me.PlanoDeContasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -86,6 +88,12 @@ Partial Class frm_menu
         Me.CadastroDeClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CadastroDeClientesToolStripMenuItem.Text = "Cadastro de clientes"
         '
+        'PlanoDeContasToolStripMenuItem
+        '
+        Me.PlanoDeContasToolStripMenuItem.Name = "PlanoDeContasToolStripMenuItem"
+        Me.PlanoDeContasToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.PlanoDeContasToolStripMenuItem.Text = "Plano de contas"
+        '
         'EncerrarToolStripMenuItem
         '
         Me.EncerrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncerrarSessãoToolStripMenuItem, Me.EncerrarSistemaToolStripMenuItem})
@@ -97,39 +105,48 @@ Partial Class frm_menu
         '
         Me.EncerrarSessãoToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSessãoToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EncerrarSessãoToolStripMenuItem.Name = "EncerrarSessãoToolStripMenuItem"
-        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(168, 30)
+        Me.EncerrarSessãoToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.EncerrarSessãoToolStripMenuItem.Text = "Encerrar sessão"
         '
         'EncerrarSistemaToolStripMenuItem
         '
         Me.EncerrarSistemaToolStripMenuItem.Image = CType(resources.GetObject("EncerrarSistemaToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EncerrarSistemaToolStripMenuItem.Name = "EncerrarSistemaToolStripMenuItem"
-        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(168, 30)
+        Me.EncerrarSistemaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.EncerrarSistemaToolStripMenuItem.Text = "Encerrar sistema"
         '
         'lbl_empresa
         '
         Me.lbl_empresa.AutoSize = True
-        Me.lbl_empresa.Location = New System.Drawing.Point(136, 89)
+        Me.lbl_empresa.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_empresa.Location = New System.Drawing.Point(15, 20)
         Me.lbl_empresa.Name = "lbl_empresa"
-        Me.lbl_empresa.Size = New System.Drawing.Size(39, 13)
+        Me.lbl_empresa.Size = New System.Drawing.Size(63, 25)
         Me.lbl_empresa.TabIndex = 1
         Me.lbl_empresa.Text = "Label1"
         '
         'lbl_cnpj
         '
         Me.lbl_cnpj.AutoSize = True
-        Me.lbl_cnpj.Location = New System.Drawing.Point(136, 118)
+        Me.lbl_cnpj.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
+        Me.lbl_cnpj.Location = New System.Drawing.Point(15, 59)
         Me.lbl_cnpj.Name = "lbl_cnpj"
-        Me.lbl_cnpj.Size = New System.Drawing.Size(39, 13)
+        Me.lbl_cnpj.Size = New System.Drawing.Size(63, 25)
         Me.lbl_cnpj.TabIndex = 2
         Me.lbl_cnpj.Text = "Label1"
         '
-        'PlanoDeContasToolStripMenuItem
+        'Panel1
         '
-        Me.PlanoDeContasToolStripMenuItem.Name = "PlanoDeContasToolStripMenuItem"
-        Me.PlanoDeContasToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.PlanoDeContasToolStripMenuItem.Text = "Plano de contas"
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.lbl_empresa)
+        Me.Panel1.Controls.Add(Me.lbl_cnpj)
+        Me.Panel1.Location = New System.Drawing.Point(624, 341)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(260, 115)
+        Me.Panel1.TabIndex = 3
         '
         'frm_menu
         '
@@ -137,8 +154,7 @@ Partial Class frm_menu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(896, 468)
-        Me.Controls.Add(Me.lbl_cnpj)
-        Me.Controls.Add(Me.lbl_empresa)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -151,6 +167,8 @@ Partial Class frm_menu
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -168,4 +186,5 @@ Partial Class frm_menu
     Friend WithEvents lbl_empresa As Label
     Friend WithEvents lbl_cnpj As Label
     Friend WithEvents PlanoDeContasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Panel1 As Panel
 End Class

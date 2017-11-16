@@ -52,7 +52,7 @@
             .txt_vtotal_ativo.Clear()
             .txt_vunit_ativo.Clear()
             .cmb_tipo_ativo.Text = Nothing
-            .cmb_tipo_passivo.Text = Nothing
+            .cmb_tipo_ativo.Text = Nothing
         End With
         With frm_manutencao
             .txt_parametros.Clear()

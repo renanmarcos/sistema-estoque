@@ -144,3 +144,6 @@ C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\
 C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_rel_view.resources
 C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
 C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_planoContas.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_relatorio.resources
+C:\Users\miche\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_rel_view.resources

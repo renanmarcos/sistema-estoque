@@ -74,6 +74,10 @@
         End If
     End Sub
 
+    Private Sub tab_ativo_Click(sender As Object, e As EventArgs) Handles tab_ativo.Click
+
+    End Sub
+
     Private Sub txt_nome_passivo_LostFocus(sender As Object, e As EventArgs) Handles txt_nome_passivo.LostFocus
         sql = "SELECT * FROM tb_produtos WHERE nome='" & txt_nome_ativo.Text & "' AND cnpj='" & cnpj & "'"
         rs = db.Execute(sql)

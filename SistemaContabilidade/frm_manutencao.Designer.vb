@@ -49,10 +49,10 @@ Partial Class frm_manutencao
         '
         Me.rd_ativas.AutoSize = True
         Me.rd_ativas.Checked = True
-        Me.rd_ativas.Location = New System.Drawing.Point(19, 180)
+        Me.rd_ativas.Location = New System.Drawing.Point(13, 161)
         Me.rd_ativas.Margin = New System.Windows.Forms.Padding(2)
         Me.rd_ativas.Name = "rd_ativas"
-        Me.rd_ativas.Size = New System.Drawing.Size(112, 21)
+        Me.rd_ativas.Size = New System.Drawing.Size(107, 23)
         Me.rd_ativas.TabIndex = 21
         Me.rd_ativas.TabStop = True
         Me.rd_ativas.Text = "Contas Ativas"
@@ -61,10 +61,10 @@ Partial Class frm_manutencao
         'rd_bloqueadas
         '
         Me.rd_bloqueadas.AutoSize = True
-        Me.rd_bloqueadas.Location = New System.Drawing.Point(19, 199)
+        Me.rd_bloqueadas.Location = New System.Drawing.Point(13, 188)
         Me.rd_bloqueadas.Margin = New System.Windows.Forms.Padding(2)
         Me.rd_bloqueadas.Name = "rd_bloqueadas"
-        Me.rd_bloqueadas.Size = New System.Drawing.Size(149, 21)
+        Me.rd_bloqueadas.Size = New System.Drawing.Size(144, 23)
         Me.rd_bloqueadas.TabIndex = 22
         Me.rd_bloqueadas.Text = "Contas Bloqueadas"
         Me.rd_bloqueadas.UseVisualStyleBackColor = True
@@ -72,12 +72,12 @@ Partial Class frm_manutencao
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bebas Neue", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Cooper Black", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(13, 32)
+        Me.Label2.Location = New System.Drawing.Point(9, 30)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 32)
+        Me.Label2.Size = New System.Drawing.Size(132, 24)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Buscar por:"
         '
@@ -86,7 +86,7 @@ Partial Class frm_manutencao
         Me.cmb_selecione.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_selecione.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
         Me.cmb_selecione.FormattingEnabled = True
-        Me.cmb_selecione.Location = New System.Drawing.Point(13, 143)
+        Me.cmb_selecione.Location = New System.Drawing.Point(13, 118)
         Me.cmb_selecione.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_selecione.Name = "cmb_selecione"
         Me.cmb_selecione.Size = New System.Drawing.Size(148, 33)
@@ -95,7 +95,7 @@ Partial Class frm_manutencao
         'txt_parametros
         '
         Me.txt_parametros.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!)
-        Me.txt_parametros.Location = New System.Drawing.Point(13, 66)
+        Me.txt_parametros.Location = New System.Drawing.Point(13, 56)
         Me.txt_parametros.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_parametros.Name = "txt_parametros"
         Me.txt_parametros.Size = New System.Drawing.Size(148, 32)
@@ -104,10 +104,10 @@ Partial Class frm_manutencao
         'rd_todas
         '
         Me.rd_todas.AutoSize = True
-        Me.rd_todas.Location = New System.Drawing.Point(19, 219)
+        Me.rd_todas.Location = New System.Drawing.Point(13, 215)
         Me.rd_todas.Margin = New System.Windows.Forms.Padding(2)
         Me.rd_todas.Name = "rd_todas"
-        Me.rd_todas.Size = New System.Drawing.Size(133, 21)
+        Me.rd_todas.Size = New System.Drawing.Size(125, 23)
         Me.rd_todas.TabIndex = 23
         Me.rd_todas.Text = "Todas as Contas"
         Me.rd_todas.UseVisualStyleBackColor = True
@@ -115,14 +115,14 @@ Partial Class frm_manutencao
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bebas Neue", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label1.Location = New System.Drawing.Point(13, 109)
+        Me.Label1.Location = New System.Drawing.Point(9, 95)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(148, 32)
+        Me.Label1.Size = New System.Drawing.Size(159, 21)
         Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Tipos De Conta:"
+        Me.Label1.Text = "Tipos de Conta:"
         '
         'GroupBox1
         '
@@ -135,8 +135,8 @@ Partial Class frm_manutencao
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.rd_bloqueadas)
         Me.GroupBox1.Controls.Add(Me.rd_ativas)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.06993!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(5, 91)
+        Me.GroupBox1.Font = New System.Drawing.Font("Bernard MT Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 89)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
@@ -162,7 +162,7 @@ Partial Class frm_manutencao
         Me.dgv_dados.Name = "dgv_dados"
         Me.dgv_dados.ReadOnly = True
         Me.dgv_dados.RowTemplate.Height = 28
-        Me.dgv_dados.Size = New System.Drawing.Size(616, 433)
+        Me.dgv_dados.Size = New System.Drawing.Size(616, 398)
         Me.dgv_dados.TabIndex = 0
         '
         'numero
@@ -228,12 +228,13 @@ Partial Class frm_manutencao
         Me.btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btn_voltar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_voltar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.06993!)
+        Me.btn_voltar.Font = New System.Drawing.Font("Cooper Black", 14.25!)
+        Me.btn_voltar.ForeColor = System.Drawing.SystemColors.Highlight
         Me.btn_voltar.Image = CType(resources.GetObject("btn_voltar.Image"), System.Drawing.Image)
         Me.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_voltar.Location = New System.Drawing.Point(100, 350)
+        Me.btn_voltar.Location = New System.Drawing.Point(5, 348)
         Me.btn_voltar.Name = "btn_voltar"
-        Me.btn_voltar.Size = New System.Drawing.Size(89, 39)
+        Me.btn_voltar.Size = New System.Drawing.Size(110, 39)
         Me.btn_voltar.TabIndex = 33
         Me.btn_voltar.Text = "Voltar"
         Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight

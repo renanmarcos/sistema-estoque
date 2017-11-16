@@ -3,6 +3,7 @@
 Public Class frm_login
     Dim n_tentativas As Integer
     Private Sub frm_login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         With cmb_nivel.Items
             .Add("Usuário")
             .Add("Administrador")
@@ -10,15 +11,6 @@ Public Class frm_login
         cmb_nivel.SelectedIndex = 0
         txt_usuario.Focus()
         conecta_banco()
-
-        Dim privateFonts As New PrivateFontCollection()
-        privateFonts.AddFontFile(Application.StartupPath & "\Fontes\BebasNeue.otf")
-
-        For Each C As Control In Me.Controls
-            If TypeOf C Is Label Then
-                C.Font = New Font(privateFonts.Families(0), 16, FontStyle.Regular)
-            End If
-        Next
 
     End Sub
 

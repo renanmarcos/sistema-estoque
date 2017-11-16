@@ -1,5 +1,5 @@
 ﻿Public Class frm_recuperar
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_confirma.Click
         If Not (txt_usuario.Text = Nothing Or txt_resposta.Text = Nothing) Then
             sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "' OR email='" & txt_usuario.Text & "'"
             rs = db.Execute(sql)
@@ -39,7 +39,7 @@
         cmb_perguntas.SelectedIndex = 0
     End Sub
 
-    Private Sub btn_voltar_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
+    Private Sub btn_voltar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 End Class

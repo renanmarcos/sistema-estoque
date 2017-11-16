@@ -1,6 +1,7 @@
 ﻿Public Class frm_manutencao
     Dim cont As Integer
     Private Sub frm_manutencao_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         With cmb_selecione.Items
             .Add("usuario")
             .Add("email")
@@ -8,6 +9,7 @@
         cmb_selecione.SelectedIndex = 0
         conecta_banco()
         primeira_listagem()
+
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txt_parametros.TextChanged

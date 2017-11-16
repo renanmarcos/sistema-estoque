@@ -33,7 +33,7 @@
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btn_seguir_Click(sender As Object, e As EventArgs) Handles btn_seguir.Click
         If txt_nome.Text = Nothing Or txt_cnpj.MaskCompleted = False Or txt_usuario.Text = Nothing Or txt_email.Text = Nothing Or txt_resposta.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_razao.Text = Nothing Then
             MsgBox("Todos os campos precisam ser preenchidos.", vbInformation + vbOKOnly, "Atenção")
         Else
