@@ -22,18 +22,18 @@ Partial Class frm_planoContas
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.1 Banco Itaú")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.2 Banco Bradesco")
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode13, TreeNode14})
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2.1 Sapatos de salto alto")
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode16})
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1. Ativo", New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode17})
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.1 Banco Itaú")
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.2 Banco Bradesco")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode20})
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2.1 Sapatos de salto alto")
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode22})
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2. Passivo", New System.Windows.Forms.TreeNode() {TreeNode21, TreeNode23})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.1 Banco Itaú")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.2 Banco Bradesco")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2.1 Sapatos de salto alto")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode4})
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1. Ativo", New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode5})
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.1 Banco Itaú")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.2 Banco Bradesco")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8})
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2.1 Sapatos de salto alto")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode10})
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2. Passivo", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode11})
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.tab_cadastro = New System.Windows.Forms.TabControl()
         Me.tab_ativo = New System.Windows.Forms.TabPage()
@@ -73,31 +73,31 @@ Partial Class frm_planoContas
         '
         Me.TreeView1.Location = New System.Drawing.Point(12, 12)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode13.Name = "Nó3"
-        TreeNode13.Text = "1.1.1 Banco Itaú"
-        TreeNode14.Name = "Nó5"
-        TreeNode14.Text = "1.1.2 Banco Bradesco"
-        TreeNode15.Name = "Nó1"
-        TreeNode15.Text = "1.1 Bancos c/ movimento"
-        TreeNode16.Name = "Nó7"
-        TreeNode16.Text = "1.2.1 Sapatos de salto alto"
-        TreeNode17.Name = "Nó6"
-        TreeNode17.Text = "1.2 Estoque de mercadorias"
-        TreeNode18.Name = "ativo"
-        TreeNode18.Text = "1. Ativo"
-        TreeNode19.Name = "Nó8"
-        TreeNode19.Text = "2.1.1 Banco Itaú"
-        TreeNode20.Name = "Nó9"
-        TreeNode20.Text = "2.1.2 Banco Bradesco"
-        TreeNode21.Name = "Nó2"
-        TreeNode21.Text = "2.1 Bancos c/ movimento"
-        TreeNode22.Name = "Nó11"
-        TreeNode22.Text = "2.2.1 Sapatos de salto alto"
-        TreeNode23.Name = "Nó10"
-        TreeNode23.Text = "2.2 Estoque de mercadorias"
-        TreeNode24.Name = "passivo"
-        TreeNode24.Text = "2. Passivo"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode18, TreeNode24})
+        TreeNode1.Name = "Nó3"
+        TreeNode1.Text = "1.1.1 Banco Itaú"
+        TreeNode2.Name = "Nó5"
+        TreeNode2.Text = "1.1.2 Banco Bradesco"
+        TreeNode3.Name = "Nó1"
+        TreeNode3.Text = "1.1 Bancos c/ movimento"
+        TreeNode4.Name = "Nó7"
+        TreeNode4.Text = "1.2.1 Sapatos de salto alto"
+        TreeNode5.Name = "Nó6"
+        TreeNode5.Text = "1.2 Estoque de mercadorias"
+        TreeNode6.Name = "ativo"
+        TreeNode6.Text = "1. Ativo"
+        TreeNode7.Name = "Nó8"
+        TreeNode7.Text = "2.1.1 Banco Itaú"
+        TreeNode8.Name = "Nó9"
+        TreeNode8.Text = "2.1.2 Banco Bradesco"
+        TreeNode9.Name = "Nó2"
+        TreeNode9.Text = "2.1 Bancos c/ movimento"
+        TreeNode10.Name = "Nó11"
+        TreeNode10.Text = "2.2.1 Sapatos de salto alto"
+        TreeNode11.Name = "Nó10"
+        TreeNode11.Text = "2.2 Estoque de mercadorias"
+        TreeNode12.Name = "passivo"
+        TreeNode12.Text = "2. Passivo"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode6, TreeNode12})
         Me.TreeView1.Size = New System.Drawing.Size(247, 457)
         Me.TreeView1.TabIndex = 0
         '

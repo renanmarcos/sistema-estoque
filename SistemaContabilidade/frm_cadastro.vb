@@ -77,13 +77,13 @@
         frm_menu.Show()
     End Sub
     Sub Verifica_ID()
-        sql = "SELECT MAX (id_usuario) AS id FROM tb_login"
+        sql = "SELECT MAX (id_usuario) AS ultimoID FROM tb_login"
         rs = db.Execute(sql)
 
         If rs.BOF = True Then
             id = 1
         Else
-            id = rs.Fields(0).Value + 1
+            id = rs.Fields("ultimoID").Value + 1
         End If
     End Sub
 End Class
