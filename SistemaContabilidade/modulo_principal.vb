@@ -45,9 +45,9 @@
         End With
         With frm_planoContas
             .txt_desc_ativo.Clear()
-            .txt_desc_passivo.Clear()
+            '.txt_desc_passivo.Clear()
             .txt_nome_ativo.Clear()
-            .txt_nome_passivo.Clear()
+            '.txt_nome_passivo.Clear()
             .txt_qtd_ativo.Clear()
             .txt_vtotal_ativo.Clear()
             .txt_vunit_ativo.Clear()
@@ -68,7 +68,6 @@
         End With
         With frm_relatorio
             .cmb_metodo.Text = Nothing
-            .cb_inicio.Checked = False
         End With
     End Sub
 End Module
