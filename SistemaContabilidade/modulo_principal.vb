@@ -2,12 +2,13 @@
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
     Public sql, tipo_conta, usuario, cnpj, nome_fantasia As String
-    Public lote As Integer
     Public conexao = Application.StartupPath & "\banco\maindb.mdb"
 
     Sub conecta_banco()
         Try
             db = CreateObject("ADODB.Connection")
+            db.CursorLocation = 3
+            rs.CursorType = 2
             db.Open("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & conexao)
         Catch ex As Exception
             MsgBox("Conexão com banco falhou!")
