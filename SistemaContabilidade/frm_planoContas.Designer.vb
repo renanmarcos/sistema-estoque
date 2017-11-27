@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_planoContas
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,22 +20,8 @@ Partial Class frm_planoContas
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-<<<<<<< HEAD
-        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.1 Banco Itaú")
-        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.2 Banco Bradesco")
-        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode25, TreeNode26})
-        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2.1 Sapatos de salto alto")
-        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode28})
-        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1. Ativo", New System.Windows.Forms.TreeNode() {TreeNode27, TreeNode29})
-        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.1 Banco Itaú")
-        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.2 Banco Bradesco")
-        Dim TreeNode33 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode31, TreeNode32})
-        Dim TreeNode34 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2.1 Sapatos de salto alto")
-        Dim TreeNode35 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode34})
-        Dim TreeNode36 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2. Passivo", New System.Windows.Forms.TreeNode() {TreeNode33, TreeNode35})
-=======
         Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.1 Banco Itaú")
         Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.2 Banco Bradesco")
         Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode13, TreeNode14})
@@ -48,26 +34,19 @@ Partial Class frm_planoContas
         Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2.1 Sapatos de salto alto")
         Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode22})
         Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2. Passivo", New System.Windows.Forms.TreeNode() {TreeNode21, TreeNode23})
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_planoContas))
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.tab_cadastro = New System.Windows.Forms.TabControl()
         Me.tab_ativo = New System.Windows.Forms.TabPage()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lbl_vtotal_ativo = New System.Windows.Forms.Label()
+        Me.lbl_vunit_ativo = New System.Windows.Forms.Label()
         Me.cmb_categoria_ativo = New System.Windows.Forms.ComboBox()
         Me.cmb_tipo_ativo = New System.Windows.Forms.ComboBox()
         Me.lbl_tipo_ativo = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_cadastrar_ativo = New System.Windows.Forms.Button()
-<<<<<<< HEAD
-        Me.lbl_vtotal_ativo = New System.Windows.Forms.Label()
-        Me.lbl_vunit_ativo = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-=======
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
         Me.txt_vtotal_ativo = New System.Windows.Forms.TextBox()
         Me.txt_vunit_ativo = New System.Windows.Forms.TextBox()
         Me.txt_qtd_ativo = New System.Windows.Forms.TextBox()
@@ -82,20 +61,14 @@ Partial Class frm_planoContas
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btn_cadastrar_passivo = New System.Windows.Forms.Button()
-<<<<<<< HEAD
-        Me.lbl_vtotal_passivo = New System.Windows.Forms.Label()
-        Me.lbl_vunit_passivo = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-=======
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
         Me.txt_vtotal_passivo = New System.Windows.Forms.TextBox()
         Me.txt_vunit_passivo = New System.Windows.Forms.TextBox()
         Me.txt_qtd_passivo = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txt_desc_passivo = New System.Windows.Forms.TextBox()
         Me.txt_nome_passivo = New System.Windows.Forms.TextBox()
+        Me.lbl_vunit_passivo = New System.Windows.Forms.Label()
+        Me.lbl_vtotal_passivo = New System.Windows.Forms.Label()
         Me.tab_cadastro.SuspendLayout()
         Me.tab_ativo.SuspendLayout()
         Me.tab_passivo.SuspendLayout()
@@ -108,33 +81,6 @@ Partial Class frm_planoContas
         Me.TreeView1.Font = New System.Drawing.Font("Bernard MT Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TreeView1.Location = New System.Drawing.Point(12, 34)
         Me.TreeView1.Name = "TreeView1"
-<<<<<<< HEAD
-        TreeNode25.Name = "Nó3"
-        TreeNode25.Text = "1.1.1 Banco Itaú"
-        TreeNode26.Name = "Nó5"
-        TreeNode26.Text = "1.1.2 Banco Bradesco"
-        TreeNode27.Name = "Nó1"
-        TreeNode27.Text = "1.1 Bancos c/ movimento"
-        TreeNode28.Name = "Nó7"
-        TreeNode28.Text = "1.2.1 Sapatos de salto alto"
-        TreeNode29.Name = "Nó6"
-        TreeNode29.Text = "1.2 Estoque de mercadorias"
-        TreeNode30.Name = "ativo"
-        TreeNode30.Text = "1. Ativo"
-        TreeNode31.Name = "Nó8"
-        TreeNode31.Text = "2.1.1 Banco Itaú"
-        TreeNode32.Name = "Nó9"
-        TreeNode32.Text = "2.1.2 Banco Bradesco"
-        TreeNode33.Name = "Nó2"
-        TreeNode33.Text = "2.1 Bancos c/ movimento"
-        TreeNode34.Name = "Nó11"
-        TreeNode34.Text = "2.2.1 Sapatos de salto alto"
-        TreeNode35.Name = "Nó10"
-        TreeNode35.Text = "2.2 Estoque de mercadorias"
-        TreeNode36.Name = "passivo"
-        TreeNode36.Text = "2. Passivo"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode30, TreeNode36})
-=======
         TreeNode13.Name = "Nó3"
         TreeNode13.Text = "1.1.1 Banco Itaú"
         TreeNode14.Name = "Nó5"
@@ -160,7 +106,6 @@ Partial Class frm_planoContas
         TreeNode24.Name = "passivo"
         TreeNode24.Text = "2. Passivo"
         Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode18, TreeNode24})
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
         Me.TreeView1.Size = New System.Drawing.Size(236, 431)
         Me.TreeView1.TabIndex = 0
         '
@@ -179,20 +124,14 @@ Partial Class frm_planoContas
         '
         Me.tab_ativo.BackColor = System.Drawing.Color.White
         Me.tab_ativo.Controls.Add(Me.Label6)
-        Me.tab_ativo.Controls.Add(Me.Label14)
-        Me.tab_ativo.Controls.Add(Me.Label15)
+        Me.tab_ativo.Controls.Add(Me.lbl_vtotal_ativo)
+        Me.tab_ativo.Controls.Add(Me.lbl_vunit_ativo)
         Me.tab_ativo.Controls.Add(Me.cmb_categoria_ativo)
         Me.tab_ativo.Controls.Add(Me.cmb_tipo_ativo)
         Me.tab_ativo.Controls.Add(Me.lbl_tipo_ativo)
         Me.tab_ativo.Controls.Add(Me.Label4)
         Me.tab_ativo.Controls.Add(Me.Label1)
         Me.tab_ativo.Controls.Add(Me.btn_cadastrar_ativo)
-<<<<<<< HEAD
-        Me.tab_ativo.Controls.Add(Me.lbl_vtotal_ativo)
-        Me.tab_ativo.Controls.Add(Me.lbl_vunit_ativo)
-        Me.tab_ativo.Controls.Add(Me.Label5)
-=======
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
         Me.tab_ativo.Controls.Add(Me.txt_vtotal_ativo)
         Me.tab_ativo.Controls.Add(Me.txt_vunit_ativo)
         Me.tab_ativo.Controls.Add(Me.txt_qtd_ativo)
@@ -217,27 +156,27 @@ Partial Class frm_planoContas
         Me.Label6.Text = "Quan - tidade"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label14
+        'lbl_vtotal_ativo
         '
-        Me.Label14.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label14.Location = New System.Drawing.Point(260, 357)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(77, 46)
-        Me.Label14.TabIndex = 58
-        Me.Label14.Text = "Valor Total"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbl_vtotal_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_vtotal_ativo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lbl_vtotal_ativo.Location = New System.Drawing.Point(260, 357)
+        Me.lbl_vtotal_ativo.Name = "lbl_vtotal_ativo"
+        Me.lbl_vtotal_ativo.Size = New System.Drawing.Size(77, 46)
+        Me.lbl_vtotal_ativo.TabIndex = 58
+        Me.lbl_vtotal_ativo.Text = "Valor Total"
+        Me.lbl_vtotal_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label15
+        'lbl_vunit_ativo
         '
-        Me.Label15.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label15.Location = New System.Drawing.Point(141, 357)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(101, 46)
-        Me.Label15.TabIndex = 57
-        Me.Label15.Text = "Valor Unitário"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbl_vunit_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_vunit_ativo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lbl_vunit_ativo.Location = New System.Drawing.Point(141, 357)
+        Me.lbl_vunit_ativo.Name = "lbl_vunit_ativo"
+        Me.lbl_vunit_ativo.Size = New System.Drawing.Size(101, 46)
+        Me.lbl_vunit_ativo.TabIndex = 57
+        Me.lbl_vunit_ativo.Text = "Valor Unitário"
+        Me.lbl_vunit_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'cmb_categoria_ativo
         '
@@ -306,42 +245,6 @@ Partial Class frm_planoContas
         Me.btn_cadastrar_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_cadastrar_ativo.UseVisualStyleBackColor = True
         '
-<<<<<<< HEAD
-        'lbl_vtotal_ativo
-        '
-        Me.lbl_vtotal_ativo.AutoSize = True
-        Me.lbl_vtotal_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_vtotal_ativo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.lbl_vtotal_ativo.Location = New System.Drawing.Point(274, 389)
-        Me.lbl_vtotal_ativo.Name = "lbl_vtotal_ativo"
-        Me.lbl_vtotal_ativo.Size = New System.Drawing.Size(87, 21)
-        Me.lbl_vtotal_ativo.TabIndex = 38
-        Me.lbl_vtotal_ativo.Text = "V. Total"
-        '
-        'lbl_vunit_ativo
-        '
-        Me.lbl_vunit_ativo.AutoSize = True
-        Me.lbl_vunit_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_vunit_ativo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.lbl_vunit_ativo.Location = New System.Drawing.Point(144, 389)
-        Me.lbl_vunit_ativo.Name = "lbl_vunit_ativo"
-        Me.lbl_vunit_ativo.Size = New System.Drawing.Size(120, 21)
-        Me.lbl_vunit_ativo.TabIndex = 37
-        Me.lbl_vunit_ativo.Text = "V. Unitário"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label5.Location = New System.Drawing.Point(17, 389)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(123, 21)
-        Me.Label5.TabIndex = 36
-        Me.Label5.Text = "Quantidade"
-        '
-=======
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
         'txt_vtotal_ativo
         '
         Me.txt_vtotal_ativo.Enabled = False
@@ -403,6 +306,8 @@ Partial Class frm_planoContas
         '
         'tab_passivo
         '
+        Me.tab_passivo.Controls.Add(Me.lbl_vtotal_passivo)
+        Me.tab_passivo.Controls.Add(Me.lbl_vunit_passivo)
         Me.tab_passivo.Controls.Add(Me.Label12)
         Me.tab_passivo.Controls.Add(Me.cmb_categoria_passivo)
         Me.tab_passivo.Controls.Add(Me.cmb_tipo_passivo)
@@ -410,14 +315,6 @@ Partial Class frm_planoContas
         Me.tab_passivo.Controls.Add(Me.Label8)
         Me.tab_passivo.Controls.Add(Me.Label9)
         Me.tab_passivo.Controls.Add(Me.btn_cadastrar_passivo)
-<<<<<<< HEAD
-        Me.tab_passivo.Controls.Add(Me.lbl_vtotal_passivo)
-        Me.tab_passivo.Controls.Add(Me.lbl_vunit_passivo)
-        Me.tab_passivo.Controls.Add(Me.Label12)
-=======
-        Me.tab_passivo.Controls.Add(Me.Label10)
-        Me.tab_passivo.Controls.Add(Me.Label11)
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
         Me.tab_passivo.Controls.Add(Me.txt_vtotal_passivo)
         Me.tab_passivo.Controls.Add(Me.txt_vunit_passivo)
         Me.tab_passivo.Controls.Add(Me.txt_qtd_passivo)
@@ -509,61 +406,6 @@ Partial Class frm_planoContas
         Me.btn_cadastrar_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_cadastrar_passivo.UseVisualStyleBackColor = True
         '
-        'lbl_vtotal_passivo
-        '
-<<<<<<< HEAD
-        Me.lbl_vtotal_passivo.AutoSize = True
-        Me.lbl_vtotal_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_vtotal_passivo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.lbl_vtotal_passivo.Location = New System.Drawing.Point(274, 389)
-        Me.lbl_vtotal_passivo.Name = "lbl_vtotal_passivo"
-        Me.lbl_vtotal_passivo.Size = New System.Drawing.Size(87, 21)
-        Me.lbl_vtotal_passivo.TabIndex = 55
-        Me.lbl_vtotal_passivo.Text = "V. Total"
-=======
-        Me.Label10.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label10.Location = New System.Drawing.Point(263, 357)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(77, 46)
-        Me.Label10.TabIndex = 55
-        Me.Label10.Text = "Valor Total"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
-        '
-        'lbl_vunit_passivo
-        '
-<<<<<<< HEAD
-        Me.lbl_vunit_passivo.AutoSize = True
-        Me.lbl_vunit_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_vunit_passivo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.lbl_vunit_passivo.Location = New System.Drawing.Point(144, 389)
-        Me.lbl_vunit_passivo.Name = "lbl_vunit_passivo"
-        Me.lbl_vunit_passivo.Size = New System.Drawing.Size(120, 21)
-        Me.lbl_vunit_passivo.TabIndex = 54
-        Me.lbl_vunit_passivo.Text = "V. Unitário"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label12.Location = New System.Drawing.Point(17, 389)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(123, 21)
-        Me.Label12.TabIndex = 53
-        Me.Label12.Text = "Quantidade"
-=======
-        Me.Label11.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label11.Location = New System.Drawing.Point(144, 357)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(101, 46)
-        Me.Label11.TabIndex = 54
-        Me.Label11.Text = "Valor Unitário"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
-        '
         'txt_vtotal_passivo
         '
         Me.txt_vtotal_passivo.Enabled = False
@@ -623,6 +465,28 @@ Partial Class frm_planoContas
         Me.txt_nome_passivo.Size = New System.Drawing.Size(406, 26)
         Me.txt_nome_passivo.TabIndex = 47
         '
+        'lbl_vunit_passivo
+        '
+        Me.lbl_vunit_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_vunit_passivo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lbl_vunit_passivo.Location = New System.Drawing.Point(143, 357)
+        Me.lbl_vunit_passivo.Name = "lbl_vunit_passivo"
+        Me.lbl_vunit_passivo.Size = New System.Drawing.Size(100, 46)
+        Me.lbl_vunit_passivo.TabIndex = 62
+        Me.lbl_vunit_passivo.Text = "Valor Unitário"
+        Me.lbl_vunit_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_vtotal_passivo
+        '
+        Me.lbl_vtotal_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_vtotal_passivo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lbl_vtotal_passivo.Location = New System.Drawing.Point(259, 355)
+        Me.lbl_vtotal_passivo.Name = "lbl_vtotal_passivo"
+        Me.lbl_vtotal_passivo.Size = New System.Drawing.Size(81, 46)
+        Me.lbl_vtotal_passivo.TabIndex = 63
+        Me.lbl_vtotal_passivo.Text = "Valor Total"
+        Me.lbl_vtotal_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frm_planoContas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -650,12 +514,6 @@ Partial Class frm_planoContas
     Friend WithEvents tab_ativo As TabPage
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_cadastrar_ativo As Button
-<<<<<<< HEAD
-    Friend WithEvents lbl_vtotal_ativo As Label
-    Friend WithEvents lbl_vunit_ativo As Label
-    Friend WithEvents Label5 As Label
-=======
->>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
     Friend WithEvents txt_vtotal_ativo As TextBox
     Friend WithEvents txt_vunit_ativo As TextBox
     Friend WithEvents txt_qtd_ativo As TextBox
@@ -673,8 +531,6 @@ Partial Class frm_planoContas
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents btn_cadastrar_passivo As Button
-    Friend WithEvents lbl_vtotal_passivo As Label
-    Friend WithEvents lbl_vunit_passivo As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents txt_vtotal_passivo As TextBox
     Friend WithEvents txt_vunit_passivo As TextBox
@@ -683,6 +539,8 @@ Partial Class frm_planoContas
     Friend WithEvents txt_desc_passivo As TextBox
     Friend WithEvents txt_nome_passivo As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
+    Friend WithEvents lbl_vtotal_ativo As Label
+    Friend WithEvents lbl_vunit_ativo As Label
+    Friend WithEvents lbl_vtotal_passivo As Label
+    Friend WithEvents lbl_vunit_passivo As Label
 End Class

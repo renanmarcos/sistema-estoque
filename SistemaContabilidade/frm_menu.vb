@@ -7,7 +7,7 @@
         frm_manutencao.Show()
     End Sub
 
-    Private Sub CadastroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeClientesToolStripMenuItem.Click
+    Private Sub CadastroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs)
         frm_cadastro.Show()
     End Sub
 
@@ -30,5 +30,9 @@
 
     Private Sub PlanoDeContasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlanoDeContasToolStripMenuItem.Click
         frm_planoContas.Show()
+    End Sub
+
+    Private Sub RelatórioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelatórioToolStripMenuItem.Click
+        frm_relatorio.Show()
     End Sub
 End Class

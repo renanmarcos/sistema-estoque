@@ -1,7 +1,6 @@
 ﻿Public Class frm_planoContas
     Dim sugestoes As New AutoCompleteStringCollection
     Dim id As Integer
-    Dim cnpj = "88.724.022/0001-45"
     Dim qtd, vunitario, vtotal As Double
     Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
         If TreeView1.SelectedNode.Name = "ativo" Then
@@ -149,27 +148,27 @@
                         id = rs.Fields("id").Value
 
                         sql = "INSERT INTO tb_entrada (id, quantidade, valor_unitario, valor_total, grupo_contas, " &
-                              "data_entrada, hora_entrada, vendidoPeps, vendidoUeps) VALUES(" & id & ", " & txt_qtd.Text & ", " &
-                              "" & txt_vunit.Text & ", " & vtotal & ", '" & grupoConta & "', " &
-                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "', 'não', 'não')"
+                              "data_entrada, hora_entrada) VALUES(" & id & ", " & txt_qtd.Text & ", " &
+                              "'" & txt_vunit.Text & "', '" & vtotal & "', '" & grupoConta & "', " &
+                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                         db.Execute(sql)
 
                         MsgBox("Produto inserido com sucesso!")
                     Else
                         Dim id As Integer
 
-                        sql = "SELECT MAX(id) AS idMaximo FROM tb_produtos"
+                        sql = "SELECT IIF(ISNULL(MAX(id)), 0, MAX(id)) AS idMaximo FROM tb_produtos"
                         rs = db.Execute(sql)
                         id = rs.Fields("idMaximo").Value + 1
 
-                        sql = "INSERT INTO tb_produtos VALUES('" & cnpj & "', " & id & ", " & id & ", " &
+                        sql = "INSERT INTO tb_produtos VALUES('" & cnpj & "', " & id & ", " &
                               "'" & txt_nome.Text & "', '" & txt_desc.Text & "', '" & cmb_categoria.Text & "')"
                         db.Execute(sql)
 
                         sql = "INSERT INTO tb_entrada (id, quantidade, valor_unitario, valor_total, grupo_contas, " &
-                              "data_entrada, hora_entrada, vendidoPeps, vendidoUeps) VALUES(" & id & ", " & txt_qtd.Text & ", " &
-                              "" & txt_vunit.Text & ", " & vtotal & ", '" & grupoConta & "', " &
-                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "', 'não', 'não')"
+                              "data_entrada, hora_entrada) VALUES(" & id & ", " & txt_qtd.Text & ", " &
+                              "'" & txt_vunit.Text & "', '" & vtotal & "', '" & grupoConta & "', " &
+                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                         db.Execute(sql)
                         atualizarSugestoes()
 
@@ -198,11 +197,11 @@
 
                     id = rs.Fields("id").Value
 
-                    sql = "SELECT sum(quantidade) FROM tb_entrada WHERE id=" & id
+                    sql = "SELECT IIF(ISNULL(SUM(quantidade)), 0, SUM(quantidade)) FROM tb_entrada WHERE id=" & id
                     rs = db.Execute(sql)
                     qtdEntrada = rs.Fields(0).Value
 
-                    sql = "SELECT sum(quantidade) FROM tb_saida_peps WHERE id=" & id
+                    sql = "SELECT IIF(ISNULL(SUM(quantidade)), 0, SUM(quantidade)) FROM tb_saida_peps WHERE id=" & id
                     rs = db.Execute(sql)
                     qtdSaida = rs.Fields(0).Value
 
@@ -214,7 +213,6 @@
                     Else
                         Dim rsAux As New ADODB.Recordset
                         Dim qtdAtualLote As Integer = 0
-                        Dim qtdSobraLote As Integer = 0
 
                         sql = "SELECT * FROM tb_entrada WHERE id=" & id & ""
                         rs = db.Execute(sql)
@@ -237,10 +235,9 @@
                                           "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                                     db.Execute(sql)
                                 Else
-                                    qtdSobraLote = qtdAtualLote - qtdDigitada
 
                                     sql = "INSERT INTO tb_saida_peps VALUES(" & id & ", " & rs.Fields("lote").Value & ", " & qtdDigitada & "," &
-                                          "" & rs.Fields("valor_unitario").Value & ", " & qtdSobraLote * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
+                                          "" & rs.Fields("valor_unitario").Value & ", " & qtdDigitada * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
                                           "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                                     db.Execute(sql)
 
@@ -274,10 +271,9 @@
                                           "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                                     db.Execute(sql)
                                 Else
-                                    qtdSobraLote = qtdAtualLote - qtdDigitada
 
                                     sql = "INSERT INTO tb_saida_ueps VALUES(" & id & ", " & rs.Fields("lote").Value & ", " & qtdDigitada & "," &
-                                          "" & rs.Fields("valor_unitario").Value & ", " & qtdSobraLote * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
+                                          "" & rs.Fields("valor_unitario").Value & ", " & qtdDigitada * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
                                           "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                                     db.Execute(sql)
 
