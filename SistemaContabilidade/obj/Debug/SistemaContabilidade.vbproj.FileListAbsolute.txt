@@ -169,5 +169,10 @@ C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaCo
 C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADODB.dll
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADOMD.dll
+<<<<<<< HEAD
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADODB.dll
 C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADOMD.dll
+=======
+C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADODB.dll
+C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADOMD.dll
+>>>>>>> 3ad242f234ed4a40cf4b13d877244846f0119e88
