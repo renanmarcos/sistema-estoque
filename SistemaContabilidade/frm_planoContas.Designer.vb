@@ -22,18 +22,6 @@ Partial Class frm_planoContas
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.1 Banco Itaú")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1.2 Banco Bradesco")
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode13, TreeNode14})
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2.1 Sapatos de salto alto")
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode16})
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("1. Ativo", New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode17})
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.1 Banco Itaú")
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1.2 Banco Bradesco")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.1 Bancos c/ movimento", New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode20})
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2.1 Sapatos de salto alto")
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2.2 Estoque de mercadorias", New System.Windows.Forms.TreeNode() {TreeNode22})
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("2. Passivo", New System.Windows.Forms.TreeNode() {TreeNode21, TreeNode23})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_planoContas))
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.tab_cadastro = New System.Windows.Forms.TabControl()
@@ -54,6 +42,8 @@ Partial Class frm_planoContas
         Me.txt_desc_ativo = New System.Windows.Forms.TextBox()
         Me.txt_nome_ativo = New System.Windows.Forms.TextBox()
         Me.tab_passivo = New System.Windows.Forms.TabPage()
+        Me.lbl_vtotal_passivo = New System.Windows.Forms.Label()
+        Me.lbl_vunit_passivo = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.cmb_categoria_passivo = New System.Windows.Forms.ComboBox()
         Me.cmb_tipo_passivo = New System.Windows.Forms.ComboBox()
@@ -67,8 +57,6 @@ Partial Class frm_planoContas
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txt_desc_passivo = New System.Windows.Forms.TextBox()
         Me.txt_nome_passivo = New System.Windows.Forms.TextBox()
-        Me.lbl_vunit_passivo = New System.Windows.Forms.Label()
-        Me.lbl_vtotal_passivo = New System.Windows.Forms.Label()
         Me.tab_cadastro.SuspendLayout()
         Me.tab_ativo.SuspendLayout()
         Me.tab_passivo.SuspendLayout()
@@ -81,31 +69,6 @@ Partial Class frm_planoContas
         Me.TreeView1.Font = New System.Drawing.Font("Bernard MT Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TreeView1.Location = New System.Drawing.Point(12, 34)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode13.Name = "Nó3"
-        TreeNode13.Text = "1.1.1 Banco Itaú"
-        TreeNode14.Name = "Nó5"
-        TreeNode14.Text = "1.1.2 Banco Bradesco"
-        TreeNode15.Name = "Nó1"
-        TreeNode15.Text = "1.1 Bancos c/ movimento"
-        TreeNode16.Name = "Nó7"
-        TreeNode16.Text = "1.2.1 Sapatos de salto alto"
-        TreeNode17.Name = "Nó6"
-        TreeNode17.Text = "1.2 Estoque de mercadorias"
-        TreeNode18.Name = "ativo"
-        TreeNode18.Text = "1. Ativo"
-        TreeNode19.Name = "Nó8"
-        TreeNode19.Text = "2.1.1 Banco Itaú"
-        TreeNode20.Name = "Nó9"
-        TreeNode20.Text = "2.1.2 Banco Bradesco"
-        TreeNode21.Name = "Nó2"
-        TreeNode21.Text = "2.1 Bancos c/ movimento"
-        TreeNode22.Name = "Nó11"
-        TreeNode22.Text = "2.2.1 Sapatos de salto alto"
-        TreeNode23.Name = "Nó10"
-        TreeNode23.Text = "2.2 Estoque de mercadorias"
-        TreeNode24.Name = "passivo"
-        TreeNode24.Text = "2. Passivo"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode18, TreeNode24})
         Me.TreeView1.Size = New System.Drawing.Size(236, 431)
         Me.TreeView1.TabIndex = 0
         '
@@ -328,6 +291,28 @@ Partial Class frm_planoContas
         Me.tab_passivo.Text = "PASSIVO"
         Me.tab_passivo.UseVisualStyleBackColor = True
         '
+        'lbl_vtotal_passivo
+        '
+        Me.lbl_vtotal_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_vtotal_passivo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lbl_vtotal_passivo.Location = New System.Drawing.Point(259, 355)
+        Me.lbl_vtotal_passivo.Name = "lbl_vtotal_passivo"
+        Me.lbl_vtotal_passivo.Size = New System.Drawing.Size(81, 46)
+        Me.lbl_vtotal_passivo.TabIndex = 63
+        Me.lbl_vtotal_passivo.Text = "Valor Total"
+        Me.lbl_vtotal_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_vunit_passivo
+        '
+        Me.lbl_vunit_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_vunit_passivo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.lbl_vunit_passivo.Location = New System.Drawing.Point(143, 357)
+        Me.lbl_vunit_passivo.Name = "lbl_vunit_passivo"
+        Me.lbl_vunit_passivo.Size = New System.Drawing.Size(100, 46)
+        Me.lbl_vunit_passivo.TabIndex = 62
+        Me.lbl_vunit_passivo.Text = "Valor Unitário"
+        Me.lbl_vunit_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label12
         '
         Me.Label12.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -464,28 +449,6 @@ Partial Class frm_planoContas
         Me.txt_nome_passivo.Name = "txt_nome_passivo"
         Me.txt_nome_passivo.Size = New System.Drawing.Size(406, 26)
         Me.txt_nome_passivo.TabIndex = 47
-        '
-        'lbl_vunit_passivo
-        '
-        Me.lbl_vunit_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_vunit_passivo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.lbl_vunit_passivo.Location = New System.Drawing.Point(143, 357)
-        Me.lbl_vunit_passivo.Name = "lbl_vunit_passivo"
-        Me.lbl_vunit_passivo.Size = New System.Drawing.Size(100, 46)
-        Me.lbl_vunit_passivo.TabIndex = 62
-        Me.lbl_vunit_passivo.Text = "Valor Unitário"
-        Me.lbl_vunit_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lbl_vtotal_passivo
-        '
-        Me.lbl_vtotal_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_vtotal_passivo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.lbl_vtotal_passivo.Location = New System.Drawing.Point(259, 355)
-        Me.lbl_vtotal_passivo.Name = "lbl_vtotal_passivo"
-        Me.lbl_vtotal_passivo.Size = New System.Drawing.Size(81, 46)
-        Me.lbl_vtotal_passivo.TabIndex = 63
-        Me.lbl_vtotal_passivo.Text = "Valor Total"
-        Me.lbl_vtotal_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frm_planoContas
         '

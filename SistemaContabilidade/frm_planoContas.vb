@@ -1,6 +1,7 @@
 ﻿Public Class frm_planoContas
     Dim sugestoes As New AutoCompleteStringCollection
-    Dim id As Integer
+    Dim id, cont, totalativo, totalpassivo As Integer
+    Dim nome As String
     Dim qtd, vunitario, vtotal As Double
     Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
         If TreeView1.SelectedNode.Name = "ativo" Then
@@ -19,6 +20,54 @@
         cmb_categoria_ativo.SelectedIndex = 0
         cmb_categoria_passivo.SelectedIndex = 0
         atualizarSugestoes()
+
+        sql = "SELECT SUM(valor_total) as teste FROM tb_saida_media INNER Join tb_produtos on tb_produtos.id = tb_saida_media.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_saida_media.grupo_contas='ativo'"
+        rs = db.Execute(sql)
+        totalativo = rs.Fields("teste").Value - totalativo
+
+        sql = "SELECT SUM(valor_total) as teste FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='ativo'"
+        rs = db.Execute(sql)
+        totalativo = rs.Fields("teste").Value + totalativo
+
+        sql = "SELECT SUM(valor_total) as teste FROM tb_saida_media INNER Join tb_produtos on tb_produtos.id = tb_saida_media.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_saida_media.grupo_contas='passivo'"
+        rs = db.Execute(sql)
+        totalpassivo = rs.Fields("teste").Value + totalpassivo
+
+        sql = "SELECT SUM(valor_total) as teste FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='passivo'"
+        rs = db.Execute(sql)
+        totalpassivo = rs.Fields("teste").Value - totalpassivo
+
+        sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='ativo'"
+        rs = db.Execute(sql)
+        TreeView1.Nodes.Add(New TreeNode("1. Ativo " + totalativo.ToString("c")))
+        TreeView1.Nodes(0).Nodes.Add(New TreeNode("1.1. Bancos c/ Movimento"))
+        TreeView1.Nodes(0).Nodes(0).Nodes.Add(New TreeNode("1.1.1. Banco Itaú"))
+        TreeView1.Nodes(0).Nodes.Add(New TreeNode("1.2. Estoque de mercadoria"))
+        cont = 0
+        Do While Not rs.EOF
+            If Not rs.Fields("nome").Value = nome Then
+                cont = cont + 1
+                TreeView1.Nodes(0).Nodes(1).Nodes.Add("1.2." + cont.ToString + ". " + rs.Fields("nome").Value)
+            End If
+            nome = rs.Fields("nome").Value
+            rs.MoveNext()
+        Loop
+        TreeView1.Nodes.Add(New TreeNode("2. Passivo " + totalpassivo.ToString("c")))
+        TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.1. Bancos c/ Movimento"))
+        TreeView1.Nodes(1).Nodes(0).Nodes.Add(New TreeNode("2.1.1 Banco Itaú"))
+        TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.2. Estoque de mercadoria"))
+        sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='passivo'"
+        rs = db.Execute(sql)
+        cont = 0
+        Do While Not rs.EOF
+            If Not rs.Fields("nome").Value = nome Then
+                cont = cont + 1
+                TreeView1.Nodes(1).Nodes(1).Nodes.Add("2.2." + cont.ToString + ". " + rs.Fields("nome").Value)
+            End If
+            nome = rs.Fields("nome").Value
+            rs.MoveNext()
+        Loop
+
     End Sub
 
     Private Sub btn_cadastrar_ativo_Click(sender As Object, e As EventArgs) Handles btn_cadastrar_ativo.Click
@@ -75,6 +124,39 @@
 
         txt_nome_ativo.AutoCompleteCustomSource = sugestoes
         txt_nome_passivo.AutoCompleteCustomSource = sugestoes
+    End Sub
+
+    Private Sub TreeView1_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseDoubleClick
+        Dim test As String
+        Dim vetor As Object
+        test = TreeView1.SelectedNode.Text
+        vetor = Split(test, ". ")
+        If Not vetor(1).Contains("R$") And Not vetor(1).Contains("Banco") And Not vetor(1).Contains("Estoque") Then
+            If (vetor(0).Contains("1.2")) Then
+                tab_cadastro.SelectTab(0)
+                sql = "SELECT * FROM tb_produtos WHERE nome='" & vetor(1) & "'"
+                rs = db.Execute(sql)
+                txt_nome_ativo.Focus()
+                txt_nome_ativo.Text = rs.Fields("nome").Value
+                txt_desc_ativo.Focus()
+                txt_desc_passivo.Enabled = True
+                txt_desc_passivo.Clear()
+                txt_nome_passivo.Clear()
+                cmb_categoria_passivo.Enabled = True
+
+            Else
+                tab_cadastro.SelectTab(1)
+                sql = "SELECT * FROM tb_produtos WHERE nome='" & vetor(1) & "'"
+                rs = db.Execute(sql)
+                txt_nome_passivo.Focus()
+                txt_nome_passivo.Text = rs.Fields("nome").Value
+                txt_desc_passivo.Focus()
+                txt_desc_ativo.Enabled = True
+                cmb_categoria_ativo.Enabled = True
+                txt_desc_ativo.Clear()
+                txt_nome_ativo.Clear()
+            End If
+        End If
     End Sub
 
     Private Sub btn_cadastrar_passivo_Click(sender As Object, e As EventArgs) Handles btn_cadastrar_passivo.Click
