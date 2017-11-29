@@ -1,7 +1,7 @@
 ﻿Public Class frm_estoque2
     Dim cont As Integer
     Private Sub frm_estoque2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        cmb_categoria.SelectedIndex = 0
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -21,7 +21,7 @@
                 Loop
 
                 sql = "INSERT INTO tb_produtos (cnpj, id, nome, descricao, categoria) VALUES(" &
-            "'" & cnpj & "', '" & cont + 1 & "', '" & txt_nome.Text & "', '" & txt_descricao.Text & "', '" & cmb_categoria.Text & "')"
+                      "'" & cnpj & "', '" & cont + 1 & "', '" & txt_nome.Text & "', '" & txt_descricao.Text & "', '" & cmb_categoria.Text & "')"
             End If
         End If
 
@@ -32,7 +32,7 @@
             sql = "select * from tb_produtos where cnpj = '" & cnpj & "'"
             rs = db.Execute(sql)
             Do While rs.EOF = False
-                .Rows.Add(rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value)
+                .Rows.Add(rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value)
                 rs.MoveNext()
             Loop
         End With

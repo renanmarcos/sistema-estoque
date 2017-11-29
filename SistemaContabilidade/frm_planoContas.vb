@@ -58,7 +58,7 @@
         Loop
         TreeView1.Nodes.Add(New TreeNode("2. Passivo " + totalpassivo.ToString("c")))
         TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.1. Bancos c/ Movimento"))
-        TreeView1.Nodes(1).Nodes(0).Nodes.Add(New TreeNode("2.1.1 Banco Itaú"))
+        TreeView1.Nodes(1).Nodes(0).Nodes.Add(New TreeNode("2.1.1. Banco Itaú"))
         TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.2. Estoque de mercadoria"))
         sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='passivo'"
         rs = db.Execute(sql)
