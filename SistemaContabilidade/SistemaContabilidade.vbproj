@@ -82,6 +82,18 @@
     <Compile Include="frm_cadastro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_estoque.Designer.vb">
+      <DependentUpon>frm_estoque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_estoque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_estoque2.Designer.vb">
+      <DependentUpon>frm_estoque2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_estoque2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
   <ItemGroup>
     <EmbeddedResource Include="frm_cadastro.resx">
       <DependentUpon>frm_cadastro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_estoque.resx">
+      <DependentUpon>frm_estoque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_estoque2.resx">
+      <DependentUpon>frm_estoque2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.vb</DependentUpon>

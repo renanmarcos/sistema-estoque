@@ -34,7 +34,6 @@ Partial Class frm_planoContas
         Me.lbl_tipo_ativo = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btn_cadastrar_ativo = New System.Windows.Forms.Button()
         Me.txt_vtotal_ativo = New System.Windows.Forms.TextBox()
         Me.txt_vunit_ativo = New System.Windows.Forms.TextBox()
         Me.txt_qtd_ativo = New System.Windows.Forms.TextBox()
@@ -50,13 +49,14 @@ Partial Class frm_planoContas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.btn_cadastrar_passivo = New System.Windows.Forms.Button()
         Me.txt_vtotal_passivo = New System.Windows.Forms.TextBox()
         Me.txt_vunit_passivo = New System.Windows.Forms.TextBox()
         Me.txt_qtd_passivo = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txt_desc_passivo = New System.Windows.Forms.TextBox()
         Me.txt_nome_passivo = New System.Windows.Forms.TextBox()
+        Me.btn_cadastrar_ativo = New System.Windows.Forms.Button()
+        Me.btn_cadastrar_passivo = New System.Windows.Forms.Button()
         Me.tab_cadastro.SuspendLayout()
         Me.tab_ativo.SuspendLayout()
         Me.tab_passivo.SuspendLayout()
@@ -194,20 +194,6 @@ Partial Class frm_planoContas
         Me.Label1.TabIndex = 40
         Me.Label1.Text = "ATIVO"
         '
-        'btn_cadastrar_ativo
-        '
-        Me.btn_cadastrar_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cadastrar_ativo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btn_cadastrar_ativo.Image = CType(resources.GetObject("btn_cadastrar_ativo.Image"), System.Drawing.Image)
-        Me.btn_cadastrar_ativo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_cadastrar_ativo.Location = New System.Drawing.Point(393, 360)
-        Me.btn_cadastrar_ativo.Name = "btn_cadastrar_ativo"
-        Me.btn_cadastrar_ativo.Size = New System.Drawing.Size(144, 36)
-        Me.btn_cadastrar_ativo.TabIndex = 39
-        Me.btn_cadastrar_ativo.Text = "Cadastrar"
-        Me.btn_cadastrar_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_cadastrar_ativo.UseVisualStyleBackColor = True
-        '
         'txt_vtotal_ativo
         '
         Me.txt_vtotal_ativo.Enabled = False
@@ -277,13 +263,13 @@ Partial Class frm_planoContas
         Me.tab_passivo.Controls.Add(Me.Label2)
         Me.tab_passivo.Controls.Add(Me.Label8)
         Me.tab_passivo.Controls.Add(Me.Label9)
-        Me.tab_passivo.Controls.Add(Me.btn_cadastrar_passivo)
         Me.tab_passivo.Controls.Add(Me.txt_vtotal_passivo)
         Me.tab_passivo.Controls.Add(Me.txt_vunit_passivo)
         Me.tab_passivo.Controls.Add(Me.txt_qtd_passivo)
         Me.tab_passivo.Controls.Add(Me.Label13)
         Me.tab_passivo.Controls.Add(Me.txt_desc_passivo)
         Me.tab_passivo.Controls.Add(Me.txt_nome_passivo)
+        Me.tab_passivo.Controls.Add(Me.btn_cadastrar_passivo)
         Me.tab_passivo.Location = New System.Drawing.Point(4, 26)
         Me.tab_passivo.Name = "tab_passivo"
         Me.tab_passivo.Size = New System.Drawing.Size(624, 427)
@@ -377,20 +363,6 @@ Partial Class frm_planoContas
         Me.Label9.TabIndex = 57
         Me.Label9.Text = "PASSIVO"
         '
-        'btn_cadastrar_passivo
-        '
-        Me.btn_cadastrar_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cadastrar_passivo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btn_cadastrar_passivo.Image = CType(resources.GetObject("btn_cadastrar_passivo.Image"), System.Drawing.Image)
-        Me.btn_cadastrar_passivo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_cadastrar_passivo.Location = New System.Drawing.Point(393, 360)
-        Me.btn_cadastrar_passivo.Name = "btn_cadastrar_passivo"
-        Me.btn_cadastrar_passivo.Size = New System.Drawing.Size(144, 36)
-        Me.btn_cadastrar_passivo.TabIndex = 56
-        Me.btn_cadastrar_passivo.Text = "Cadastrar"
-        Me.btn_cadastrar_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_cadastrar_passivo.UseVisualStyleBackColor = True
-        '
         'txt_vtotal_passivo
         '
         Me.txt_vtotal_passivo.Enabled = False
@@ -449,6 +421,34 @@ Partial Class frm_planoContas
         Me.txt_nome_passivo.Name = "txt_nome_passivo"
         Me.txt_nome_passivo.Size = New System.Drawing.Size(406, 26)
         Me.txt_nome_passivo.TabIndex = 47
+        '
+        'btn_cadastrar_ativo
+        '
+        Me.btn_cadastrar_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cadastrar_ativo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btn_cadastrar_ativo.Image = CType(resources.GetObject("btn_cadastrar_ativo.Image"), System.Drawing.Image)
+        Me.btn_cadastrar_ativo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_cadastrar_ativo.Location = New System.Drawing.Point(393, 360)
+        Me.btn_cadastrar_ativo.Name = "btn_cadastrar_ativo"
+        Me.btn_cadastrar_ativo.Size = New System.Drawing.Size(144, 36)
+        Me.btn_cadastrar_ativo.TabIndex = 39
+        Me.btn_cadastrar_ativo.Text = "Cadastrar"
+        Me.btn_cadastrar_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_cadastrar_ativo.UseVisualStyleBackColor = True
+        '
+        'btn_cadastrar_passivo
+        '
+        Me.btn_cadastrar_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cadastrar_passivo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btn_cadastrar_passivo.Image = CType(resources.GetObject("btn_cadastrar_passivo.Image"), System.Drawing.Image)
+        Me.btn_cadastrar_passivo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_cadastrar_passivo.Location = New System.Drawing.Point(393, 360)
+        Me.btn_cadastrar_passivo.Name = "btn_cadastrar_passivo"
+        Me.btn_cadastrar_passivo.Size = New System.Drawing.Size(144, 36)
+        Me.btn_cadastrar_passivo.TabIndex = 56
+        Me.btn_cadastrar_passivo.Text = "Cadastrar"
+        Me.btn_cadastrar_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_cadastrar_passivo.UseVisualStyleBackColor = True
         '
         'frm_planoContas
         '

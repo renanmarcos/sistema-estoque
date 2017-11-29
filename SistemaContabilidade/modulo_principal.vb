@@ -2,6 +2,7 @@
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
     Public sql, tipo_conta, usuario, cnpj, nome_fantasia As String
+    Public editar As Integer
     Dim primeiraConexao As Boolean = True
     Public conexao = Application.StartupPath & "\banco\maindb.mdb"
 

@@ -45,3 +45,5 @@ C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\Sis
 C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
 C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
 C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
+C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque.resources
+C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque2.resources

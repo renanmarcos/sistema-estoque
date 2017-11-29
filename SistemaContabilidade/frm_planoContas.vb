@@ -14,6 +14,7 @@
     End Sub
 
     Private Sub frm_planoContas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim rs2 As New ADODB.Recordset
         conecta_banco()
         cmb_tipo_ativo.SelectedIndex = 0
         cmb_tipo_passivo.SelectedIndex = 0
@@ -21,21 +22,26 @@
         cmb_categoria_passivo.SelectedIndex = 0
         atualizarSugestoes()
 
-        sql = "SELECT SUM(valor_total) as teste FROM tb_saida_media INNER Join tb_produtos on tb_produtos.id = tb_saida_media.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_saida_media.grupo_contas='ativo'"
+        sql = "SELECT * FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='ativo'"
         rs = db.Execute(sql)
-        totalativo = rs.Fields("teste").Value - totalativo
+        Do While Not rs.EOF
+            totalativo = rs.Fields("valor_total").Value + totalativo
+            sql = "SELECT * FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
+            rs2 = db.Execute(sql)
+            totalativo = totalativo - rs2.Fields("valor_total").Value
+            rs.MoveNext()
+        Loop
+        'sql = "Select SUM(valor_total) As teste FROM tb_entrada INNER Join tb_produtos On tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='ativo'"
+        ' rs = db.Execute(sql)
+        'totalativo = rs.Fields("teste").Value + totalativo
 
-        sql = "SELECT SUM(valor_total) as teste FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='ativo'"
-        rs = db.Execute(sql)
-        totalativo = rs.Fields("teste").Value + totalativo
+        'sql = "SELECT SUM(valor_total) as teste FROM tb_saida_media INNER Join tb_produtos on tb_produtos.id = tb_saida_media.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_saida_media.grupo_contas='passivo'"
+        'rs = db.Execute(sql)
+        'totalpassivo = rs.Fields("teste").Value + totalpassivo
 
-        sql = "SELECT SUM(valor_total) as teste FROM tb_saida_media INNER Join tb_produtos on tb_produtos.id = tb_saida_media.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_saida_media.grupo_contas='passivo'"
-        rs = db.Execute(sql)
-        totalpassivo = rs.Fields("teste").Value + totalpassivo
-
-        sql = "SELECT SUM(valor_total) as teste FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='passivo'"
-        rs = db.Execute(sql)
-        totalpassivo = rs.Fields("teste").Value - totalpassivo
+        'sql = "SELECT SUM(valor_total) as teste FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='passivo'"
+        ' rs = db.Execute(sql)
+        'totalpassivo = rs.Fields("teste").Value - totalpassivo
 
         sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='ativo'"
         rs = db.Execute(sql)
@@ -157,6 +163,10 @@
                 txt_nome_ativo.Clear()
             End If
         End If
+    End Sub
+
+    Private Sub tab_ativo_Click(sender As Object, e As EventArgs) Handles tab_ativo.Click
+
     End Sub
 
     Private Sub btn_cadastrar_passivo_Click(sender As Object, e As EventArgs) Handles btn_cadastrar_passivo.Click

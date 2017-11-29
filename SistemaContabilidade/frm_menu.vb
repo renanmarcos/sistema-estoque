@@ -35,4 +35,8 @@
     Private Sub RelatórioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelatórioToolStripMenuItem.Click
         frm_relatorio.Show()
     End Sub
+
+    Private Sub EstoqueToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EstoqueToolStripMenuItem.Click
+        frm_estoque.Show()
+    End Sub
 End Class
