@@ -26,22 +26,20 @@
         rs = db.Execute(sql)
         Do While Not rs.EOF
             totalativo = rs.Fields("valor_total").Value + totalativo
-            sql = "SELECT * FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
+            sql = "SELECT IIF(ISNULL(SUM(valor_total)), 0, SUM(valor_total)) as teste FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
             rs2 = db.Execute(sql)
-            totalativo = totalativo - rs2.Fields("valor_total").Value
+            totalativo = totalativo - rs2.Fields("teste").Value
             rs.MoveNext()
         Loop
-        'sql = "Select SUM(valor_total) As teste FROM tb_entrada INNER Join tb_produtos On tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='ativo'"
-        ' rs = db.Execute(sql)
-        'totalativo = rs.Fields("teste").Value + totalativo
-
-        'sql = "SELECT SUM(valor_total) as teste FROM tb_saida_media INNER Join tb_produtos on tb_produtos.id = tb_saida_media.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_saida_media.grupo_contas='passivo'"
-        'rs = db.Execute(sql)
-        'totalpassivo = rs.Fields("teste").Value + totalpassivo
-
-        'sql = "SELECT SUM(valor_total) as teste FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='passivo'"
-        ' rs = db.Execute(sql)
-        'totalpassivo = rs.Fields("teste").Value - totalpassivo
+        sql = "SELECT * FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='passivo'"
+        rs = db.Execute(sql)
+        Do While Not rs.EOF
+            totalpassivo = rs.Fields("valor_total").Value + totalpassivo
+            sql = "SELECT IIF(ISNULL(SUM(valor_total)), 0, SUM(valor_total)) as teste FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
+            rs2 = db.Execute(sql)
+            totalpassivo = totalpassivo - rs2.Fields("teste").Value
+            rs.MoveNext()
+        Loop
 
         sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='ativo'"
         rs = db.Execute(sql)
