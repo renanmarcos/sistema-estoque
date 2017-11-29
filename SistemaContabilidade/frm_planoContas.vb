@@ -167,6 +167,11 @@
 
     End Sub
 
+    Private Sub btn_voltar_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
+        Me.Close()
+        frm_menu.Show()
+    End Sub
+
     Private Sub btn_cadastrar_passivo_Click(sender As Object, e As EventArgs) Handles btn_cadastrar_passivo.Click
         cadastrarProduto(cmb_tipo_passivo, txt_nome_passivo, txt_desc_passivo, txt_qtd_passivo, txt_vunit_passivo,
                          "passivo", cmb_categoria_passivo)

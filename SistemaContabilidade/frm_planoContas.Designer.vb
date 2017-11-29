@@ -34,6 +34,7 @@ Partial Class frm_planoContas
         Me.lbl_tipo_ativo = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_cadastrar_ativo = New System.Windows.Forms.Button()
         Me.txt_vtotal_ativo = New System.Windows.Forms.TextBox()
         Me.txt_vunit_ativo = New System.Windows.Forms.TextBox()
         Me.txt_qtd_ativo = New System.Windows.Forms.TextBox()
@@ -55,8 +56,8 @@ Partial Class frm_planoContas
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txt_desc_passivo = New System.Windows.Forms.TextBox()
         Me.txt_nome_passivo = New System.Windows.Forms.TextBox()
-        Me.btn_cadastrar_ativo = New System.Windows.Forms.Button()
         Me.btn_cadastrar_passivo = New System.Windows.Forms.Button()
+        Me.btn_voltar = New System.Windows.Forms.Button()
         Me.tab_cadastro.SuspendLayout()
         Me.tab_ativo.SuspendLayout()
         Me.tab_passivo.SuspendLayout()
@@ -67,9 +68,9 @@ Partial Class frm_planoContas
         Me.TreeView1.BackColor = System.Drawing.Color.White
         Me.TreeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TreeView1.Font = New System.Drawing.Font("Bernard MT Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TreeView1.Location = New System.Drawing.Point(12, 34)
+        Me.TreeView1.Location = New System.Drawing.Point(23, 38)
         Me.TreeView1.Name = "TreeView1"
-        Me.TreeView1.Size = New System.Drawing.Size(236, 431)
+        Me.TreeView1.Size = New System.Drawing.Size(236, 382)
         Me.TreeView1.TabIndex = 0
         '
         'tab_cadastro
@@ -193,6 +194,20 @@ Partial Class frm_planoContas
         Me.Label1.Size = New System.Drawing.Size(127, 36)
         Me.Label1.TabIndex = 40
         Me.Label1.Text = "ATIVO"
+        '
+        'btn_cadastrar_ativo
+        '
+        Me.btn_cadastrar_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cadastrar_ativo.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btn_cadastrar_ativo.Image = CType(resources.GetObject("btn_cadastrar_ativo.Image"), System.Drawing.Image)
+        Me.btn_cadastrar_ativo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_cadastrar_ativo.Location = New System.Drawing.Point(393, 360)
+        Me.btn_cadastrar_ativo.Name = "btn_cadastrar_ativo"
+        Me.btn_cadastrar_ativo.Size = New System.Drawing.Size(144, 36)
+        Me.btn_cadastrar_ativo.TabIndex = 39
+        Me.btn_cadastrar_ativo.Text = "Cadastrar"
+        Me.btn_cadastrar_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_cadastrar_ativo.UseVisualStyleBackColor = True
         '
         'txt_vtotal_ativo
         '
@@ -422,20 +437,6 @@ Partial Class frm_planoContas
         Me.txt_nome_passivo.Size = New System.Drawing.Size(406, 26)
         Me.txt_nome_passivo.TabIndex = 47
         '
-        'btn_cadastrar_ativo
-        '
-        Me.btn_cadastrar_ativo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cadastrar_ativo.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btn_cadastrar_ativo.Image = CType(resources.GetObject("btn_cadastrar_ativo.Image"), System.Drawing.Image)
-        Me.btn_cadastrar_ativo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_cadastrar_ativo.Location = New System.Drawing.Point(393, 360)
-        Me.btn_cadastrar_ativo.Name = "btn_cadastrar_ativo"
-        Me.btn_cadastrar_ativo.Size = New System.Drawing.Size(144, 36)
-        Me.btn_cadastrar_ativo.TabIndex = 39
-        Me.btn_cadastrar_ativo.Text = "Cadastrar"
-        Me.btn_cadastrar_ativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_cadastrar_ativo.UseVisualStyleBackColor = True
-        '
         'btn_cadastrar_passivo
         '
         Me.btn_cadastrar_passivo.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -450,12 +451,31 @@ Partial Class frm_planoContas
         Me.btn_cadastrar_passivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_cadastrar_passivo.UseVisualStyleBackColor = True
         '
+        'btn_voltar
+        '
+        Me.btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_voltar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_voltar.Font = New System.Drawing.Font("Cooper Black", 14.25!)
+        Me.btn_voltar.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btn_voltar.Image = CType(resources.GetObject("btn_voltar.Image"), System.Drawing.Image)
+        Me.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_voltar.Location = New System.Drawing.Point(83, 426)
+        Me.btn_voltar.Name = "btn_voltar"
+        Me.btn_voltar.Size = New System.Drawing.Size(110, 39)
+        Me.btn_voltar.TabIndex = 34
+        Me.btn_voltar.Text = "Voltar"
+        Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_voltar.UseVisualStyleBackColor = False
+        '
         'frm_planoContas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(909, 491)
+        Me.Controls.Add(Me.btn_voltar)
         Me.Controls.Add(Me.tab_cadastro)
         Me.Controls.Add(Me.TreeView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -463,6 +483,7 @@ Partial Class frm_planoContas
         Me.Name = "frm_planoContas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_planoContas"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.tab_cadastro.ResumeLayout(False)
         Me.tab_ativo.ResumeLayout(False)
         Me.tab_ativo.PerformLayout()
@@ -506,4 +527,5 @@ Partial Class frm_planoContas
     Friend WithEvents lbl_vunit_ativo As Label
     Friend WithEvents lbl_vtotal_passivo As Label
     Friend WithEvents lbl_vunit_passivo As Label
+    Friend WithEvents btn_voltar As Button
 End Class

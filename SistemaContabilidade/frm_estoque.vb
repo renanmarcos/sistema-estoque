@@ -47,6 +47,11 @@
         End With
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        frm_menu.Show()
+    End Sub
+
     Private Sub btn_Adicionar_Click(sender As Object, e As EventArgs) Handles btn_Adicionar.Click
         editar = 0
         frm_estoque2.Show()

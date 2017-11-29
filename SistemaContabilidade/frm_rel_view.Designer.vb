@@ -22,6 +22,7 @@ Partial Class frm_rel_view
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_rel_view))
         Me.wb_rel_view = New System.Windows.Forms.WebBrowser()
         Me.SuspendLayout()
         '
@@ -32,18 +33,20 @@ Partial Class frm_rel_view
         Me.wb_rel_view.Location = New System.Drawing.Point(0, 0)
         Me.wb_rel_view.MinimumSize = New System.Drawing.Size(20, 20)
         Me.wb_rel_view.Name = "wb_rel_view"
-        Me.wb_rel_view.Size = New System.Drawing.Size(682, 428)
+        Me.wb_rel_view.Size = New System.Drawing.Size(567, 379)
         Me.wb_rel_view.TabIndex = 0
         '
         'frm_rel_view
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(682, 428)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(567, 379)
         Me.Controls.Add(Me.wb_rel_view)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_rel_view"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Relatório produto x"
+        Me.Text = "Relatório de Produto"
         Me.ResumeLayout(False)
 
     End Sub
