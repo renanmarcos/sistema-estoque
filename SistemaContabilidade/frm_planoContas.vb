@@ -1,8 +1,9 @@
 ﻿Public Class frm_planoContas
     Dim sugestoes As New AutoCompleteStringCollection
-    Dim id, cont, totalativo, totalpassivo As Integer
+    Dim id, cont, totalativo, totalpassivo, atualizar As Integer
     Dim nome As String
     Dim qtd, vunitario, vtotal As Double
+    Dim rs2 As New ADODB.Recordset
     Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
         If TreeView1.SelectedNode.Name = "ativo" Then
             tab_cadastro.SelectTab(0)
@@ -14,64 +15,14 @@
     End Sub
 
     Private Sub frm_planoContas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim rs2 As New ADODB.Recordset
+        atualizar = 0
         conecta_banco()
         cmb_tipo_ativo.SelectedIndex = 0
         cmb_tipo_passivo.SelectedIndex = 0
         cmb_categoria_ativo.SelectedIndex = 0
         cmb_categoria_passivo.SelectedIndex = 0
         atualizarSugestoes()
-
-        sql = "SELECT * FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='ativo'"
-        rs = db.Execute(sql)
-        Do While Not rs.EOF
-            totalativo = rs.Fields("valor_total").Value + totalativo
-            sql = "SELECT IIF(ISNULL(SUM(valor_total)), 0, SUM(valor_total)) as teste FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
-            rs2 = db.Execute(sql)
-            totalativo = totalativo - rs2.Fields("teste").Value
-            rs.MoveNext()
-        Loop
-        sql = "SELECT * FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='passivo'"
-        rs = db.Execute(sql)
-        Do While Not rs.EOF
-            totalpassivo = rs.Fields("valor_total").Value + totalpassivo
-            sql = "SELECT IIF(ISNULL(SUM(valor_total)), 0, SUM(valor_total)) as teste FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
-            rs2 = db.Execute(sql)
-            totalpassivo = totalpassivo - rs2.Fields("teste").Value
-            rs.MoveNext()
-        Loop
-
-        sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='ativo'"
-        rs = db.Execute(sql)
-        TreeView1.Nodes.Add(New TreeNode("1. Ativo " + totalativo.ToString("c")))
-        TreeView1.Nodes(0).Nodes.Add(New TreeNode("1.1. Bancos c/ Movimento"))
-        TreeView1.Nodes(0).Nodes(0).Nodes.Add(New TreeNode("1.1.1. Banco Itaú"))
-        TreeView1.Nodes(0).Nodes.Add(New TreeNode("1.2. Estoque de mercadoria"))
-        cont = 0
-        Do While Not rs.EOF
-            If Not rs.Fields("nome").Value = nome Then
-                cont = cont + 1
-                TreeView1.Nodes(0).Nodes(1).Nodes.Add("1.2." + cont.ToString + ". " + rs.Fields("nome").Value)
-            End If
-            nome = rs.Fields("nome").Value
-            rs.MoveNext()
-        Loop
-        TreeView1.Nodes.Add(New TreeNode("2. Passivo " + totalpassivo.ToString("c")))
-        TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.1. Bancos c/ Movimento"))
-        TreeView1.Nodes(1).Nodes(0).Nodes.Add(New TreeNode("2.1.1. Banco Itaú"))
-        TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.2. Estoque de mercadoria"))
-        sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='passivo'"
-        rs = db.Execute(sql)
-        cont = 0
-        Do While Not rs.EOF
-            If Not rs.Fields("nome").Value = nome Then
-                cont = cont + 1
-                TreeView1.Nodes(1).Nodes(1).Nodes.Add("2.2." + cont.ToString + ". " + rs.Fields("nome").Value)
-            End If
-            nome = rs.Fields("nome").Value
-            rs.MoveNext()
-        Loop
-
+        atualizartreeview()
     End Sub
 
     Private Sub btn_cadastrar_ativo_Click(sender As Object, e As EventArgs) Handles btn_cadastrar_ativo.Click
@@ -226,7 +177,63 @@
             txt_desc.Focus()
         End If
     End Sub
+    Private Sub atualizartreeview()
+        totalativo = 0
+        totalpassivo = 0
+        If atualizar = 1 Then
+            TreeView1.Nodes(1).Remove()
+            TreeView1.Nodes(0).Remove()
+        End If
+        sql = "SELECT * FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='ativo'"
+        rs = db.Execute(sql)
+        Do While Not rs.EOF
+            totalativo = rs.Fields("valor_total").Value + totalativo
+            sql = "SELECT IIF(ISNULL(SUM(valor_total)), 0, SUM(valor_total)) as teste FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
+            rs2 = db.Execute(sql)
+            totalativo = totalativo - rs2.Fields("teste").Value
+            rs.MoveNext()
+        Loop
+        sql = "SELECT * FROM tb_entrada INNER Join tb_produtos on tb_produtos.id = tb_entrada.id WHERE tb_produtos.cnpj='" & cnpj & "' AND tb_entrada.grupo_contas='passivo'"
+        rs = db.Execute(sql)
+        Do While Not rs.EOF
+            totalpassivo = rs.Fields("valor_total").Value + totalpassivo
+            sql = "SELECT IIF(ISNULL(SUM(valor_total)), 0, SUM(valor_total)) as teste FROM tb_saida_peps WHERE lote=" & rs.Fields("lote").Value & ""
+            rs2 = db.Execute(sql)
+            totalpassivo = totalpassivo - rs2.Fields("teste").Value
+            rs.MoveNext()
+        Loop
 
+        sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='ativo'"
+        rs = db.Execute(sql)
+        TreeView1.Nodes.Add(New TreeNode("1. Ativo " + totalativo.ToString("c")))
+        TreeView1.Nodes(0).Nodes.Add(New TreeNode("1.1. Bancos c/ Movimento"))
+        TreeView1.Nodes(0).Nodes(0).Nodes.Add(New TreeNode("1.1.1. Banco Itaú"))
+        TreeView1.Nodes(0).Nodes.Add(New TreeNode("1.2. Estoque de mercadoria"))
+        cont = 0
+        Do While Not rs.EOF
+            If Not rs.Fields("nome").Value = nome Then
+                cont = cont + 1
+                TreeView1.Nodes(0).Nodes(1).Nodes.Add("1.2." + cont.ToString + ". " + rs.Fields("nome").Value)
+            End If
+            nome = rs.Fields("nome").Value
+            rs.MoveNext()
+        Loop
+        TreeView1.Nodes.Add(New TreeNode("2. Passivo " + totalpassivo.ToString("c")))
+        TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.1. Bancos c/ Movimento"))
+        TreeView1.Nodes(1).Nodes(0).Nodes.Add(New TreeNode("2.1.1. Banco Itaú"))
+        TreeView1.Nodes(1).Nodes.Add(New TreeNode("2.2. Estoque de mercadoria"))
+        sql = "SELECT * FROM (tb_produtos INNER JOIN tb_entrada ON tb_produtos.id = tb_entrada.id) WHERE tb_produtos.cnpj='" & cnpj & "' AND grupo_contas='passivo'"
+        rs = db.Execute(sql)
+        cont = 0
+        Do While Not rs.EOF
+            If Not rs.Fields("nome").Value = nome Then
+                cont = cont + 1
+                TreeView1.Nodes(1).Nodes(1).Nodes.Add("2.2." + cont.ToString + ". " + rs.Fields("nome").Value)
+            End If
+            nome = rs.Fields("nome").Value
+            rs.MoveNext()
+        Loop
+    End Sub
     Private Sub cadastrarProduto(cmb_tipo As ComboBox, txt_nome As TextBox, txt_desc As TextBox,
                                  txt_qtd As TextBox, txt_vunit As TextBox, grupoConta As String,
                                  cmb_categoria As ComboBox)
@@ -247,8 +254,9 @@
                               "'" & txt_vunit.Text & "', '" & vtotal & "', '" & grupoConta & "', " &
                               "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                         db.Execute(sql)
-
                         MsgBox("Produto inserido com sucesso!")
+                        atualizar = 1
+                        atualizartreeview()
                     Else
                         Dim id As Integer
 
@@ -268,6 +276,8 @@
                         atualizarSugestoes()
 
                         MsgBox("Produto inserido com sucesso!")
+                        atualizar = 1
+                        atualizartreeview()
                     End If
                 Catch ex As Exception
                     MsgBox("Verifique se todos os campos estão corretos.")
@@ -389,7 +399,8 @@
                         sql = "INSERT INTO tb_saida_media VALUES(" & id & ", " & qtdDigitada & ", '" & valorUnitario & "', '" & valorUnitario * qtdDigitada & "', " &
                               "'" & grupoConta & "', '" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
                         db.Execute(sql)
-
+                        atualizar = 1
+                        atualizartreeview()
                         MsgBox("Vendido com sucesso!")
                     End If
                 Else
