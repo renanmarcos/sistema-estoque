@@ -50,7 +50,7 @@ Partial Class frm_relatorio
         Me.cmb_metodo.Font = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_metodo.ForeColor = System.Drawing.SystemColors.Highlight
         Me.cmb_metodo.FormattingEnabled = True
-        Me.cmb_metodo.Items.AddRange(New Object() {"PEPS", "UPES", "Média Ponderada"})
+        Me.cmb_metodo.Items.AddRange(New Object() {"PEPS", "UEPS", "Média Ponderada"})
         Me.cmb_metodo.Location = New System.Drawing.Point(11, 26)
         Me.cmb_metodo.Name = "cmb_metodo"
         Me.cmb_metodo.Size = New System.Drawing.Size(183, 27)
