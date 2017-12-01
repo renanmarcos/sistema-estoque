@@ -54,30 +54,27 @@ Partial Class frm_cadastro
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(432, 25)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(648, 38)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 27)
+        Me.Label3.Size = New System.Drawing.Size(122, 41)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "CNPJ"
         '
         'txt_nome
         '
         Me.txt_nome.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_nome.Location = New System.Drawing.Point(25, 49)
-        Me.txt_nome.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_nome.Location = New System.Drawing.Point(38, 75)
         Me.txt_nome.Name = "txt_nome"
-        Me.txt_nome.Size = New System.Drawing.Size(407, 32)
+        Me.txt_nome.Size = New System.Drawing.Size(608, 45)
         Me.txt_nome.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(20, 18)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(30, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(231, 27)
+        Me.Label2.Size = New System.Drawing.Size(344, 41)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Nome da Empresa"
         '
@@ -85,10 +82,9 @@ Partial Class frm_cadastro
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(460, 87)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(690, 134)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 27)
+        Me.Label1.Size = New System.Drawing.Size(128, 41)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Senha"
         '
@@ -96,10 +92,9 @@ Partial Class frm_cadastro
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(655, 86)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(982, 132)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(182, 27)
+        Me.Label4.Size = New System.Drawing.Size(270, 41)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Repetir senha"
         '
@@ -109,10 +104,9 @@ Partial Class frm_cadastro
         Me.cb_visualizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cb_visualizar.Font = New System.Drawing.Font("Bernard MT Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_visualizar.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.cb_visualizar.Location = New System.Drawing.Point(749, 177)
-        Me.cb_visualizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.cb_visualizar.Location = New System.Drawing.Point(1124, 272)
         Me.cb_visualizar.Name = "cb_visualizar"
-        Me.cb_visualizar.Size = New System.Drawing.Size(93, 42)
+        Me.cb_visualizar.Size = New System.Drawing.Size(132, 60)
         Me.cb_visualizar.TabIndex = 22
         Me.cb_visualizar.Text = "Visualizar " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "senha"
         Me.cb_visualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -121,39 +115,39 @@ Partial Class frm_cadastro
         'txt_razao
         '
         Me.txt_razao.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_razao.Location = New System.Drawing.Point(25, 188)
-        Me.txt_razao.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_razao.Location = New System.Drawing.Point(38, 289)
         Me.txt_razao.Name = "txt_razao"
-        Me.txt_razao.Size = New System.Drawing.Size(321, 32)
+        Me.txt_razao.Size = New System.Drawing.Size(480, 45)
         Me.txt_razao.TabIndex = 27
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 157)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(30, 242)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(165, 27)
+        Me.Label7.Size = New System.Drawing.Size(246, 41)
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Razão Social"
         '
         'txt_senha
         '
         Me.txt_senha.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_senha.Location = New System.Drawing.Point(465, 117)
+        Me.txt_senha.Location = New System.Drawing.Point(698, 180)
+        Me.txt_senha.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_senha.Name = "txt_senha"
         Me.txt_senha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_senha.Size = New System.Drawing.Size(189, 32)
+        Me.txt_senha.Size = New System.Drawing.Size(282, 45)
         Me.txt_senha.TabIndex = 30
         '
         'txt_repetir
         '
         Me.txt_repetir.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_repetir.Location = New System.Drawing.Point(660, 117)
+        Me.txt_repetir.Location = New System.Drawing.Point(990, 180)
+        Me.txt_repetir.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_repetir.Name = "txt_repetir"
         Me.txt_repetir.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_repetir.Size = New System.Drawing.Size(189, 32)
+        Me.txt_repetir.Size = New System.Drawing.Size(282, 45)
         Me.txt_repetir.TabIndex = 31
         '
         'GroupBox2
@@ -183,9 +177,11 @@ Partial Class frm_cadastro
         Me.GroupBox2.Controls.Add(Me.cb_visualizar)
         Me.GroupBox2.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 37)
+        Me.GroupBox2.Location = New System.Drawing.Point(18, 57)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(871, 373)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox2.Size = New System.Drawing.Size(1306, 574)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Tag = ""
@@ -193,20 +189,20 @@ Partial Class frm_cadastro
         'txt_resposta
         '
         Me.txt_resposta.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_resposta.Location = New System.Drawing.Point(25, 322)
+        Me.txt_resposta.Location = New System.Drawing.Point(38, 495)
+        Me.txt_resposta.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_resposta.Name = "txt_resposta"
         Me.txt_resposta.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_resposta.Size = New System.Drawing.Size(824, 32)
+        Me.txt_resposta.Size = New System.Drawing.Size(1234, 45)
         Me.txt_resposta.TabIndex = 42
         '
         'lbl_resposta
         '
         Me.lbl_resposta.AutoSize = True
         Me.lbl_resposta.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_resposta.Location = New System.Drawing.Point(26, 293)
-        Me.lbl_resposta.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_resposta.Location = New System.Drawing.Point(39, 451)
         Me.lbl_resposta.Name = "lbl_resposta"
-        Me.lbl_resposta.Size = New System.Drawing.Size(215, 27)
+        Me.lbl_resposta.Size = New System.Drawing.Size(321, 41)
         Me.lbl_resposta.TabIndex = 41
         Me.lbl_resposta.Text = "Resposta secreta"
         '
@@ -216,20 +212,18 @@ Partial Class frm_cadastro
         Me.cmb_perguntas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_perguntas.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_perguntas.FormattingEnabled = True
-        Me.cmb_perguntas.Location = New System.Drawing.Point(25, 258)
-        Me.cmb_perguntas.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmb_perguntas.Location = New System.Drawing.Point(38, 397)
         Me.cmb_perguntas.Name = "cmb_perguntas"
-        Me.cmb_perguntas.Size = New System.Drawing.Size(824, 33)
+        Me.cmb_perguntas.Size = New System.Drawing.Size(1234, 45)
         Me.cmb_perguntas.TabIndex = 40
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(20, 229)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(30, 352)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(219, 27)
+        Me.Label5.Size = New System.Drawing.Size(326, 41)
         Me.Label5.TabIndex = 39
         Me.Label5.Text = "Pergunta secreta"
         '
@@ -237,40 +231,36 @@ Partial Class frm_cadastro
         '
         Me.lbl_email.AutoSize = True
         Me.lbl_email.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_email.Location = New System.Drawing.Point(20, 86)
-        Me.lbl_email.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_email.Location = New System.Drawing.Point(30, 132)
         Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(84, 27)
+        Me.lbl_email.Size = New System.Drawing.Size(124, 41)
         Me.lbl_email.TabIndex = 37
         Me.lbl_email.Text = "Email"
         '
         'txt_email
         '
         Me.txt_email.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_email.Location = New System.Drawing.Point(25, 117)
-        Me.txt_email.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_email.Location = New System.Drawing.Point(38, 180)
         Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(435, 32)
+        Me.txt_email.Size = New System.Drawing.Size(650, 45)
         Me.txt_email.TabIndex = 38
         '
         'lbl_usuario
         '
         Me.lbl_usuario.AutoSize = True
         Me.lbl_usuario.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_usuario.Location = New System.Drawing.Point(632, 18)
-        Me.lbl_usuario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_usuario.Location = New System.Drawing.Point(948, 28)
         Me.lbl_usuario.Name = "lbl_usuario"
-        Me.lbl_usuario.Size = New System.Drawing.Size(109, 27)
+        Me.lbl_usuario.Size = New System.Drawing.Size(163, 41)
         Me.lbl_usuario.TabIndex = 35
         Me.lbl_usuario.Text = "Usuário"
         '
         'txt_usuario
         '
         Me.txt_usuario.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_usuario.Location = New System.Drawing.Point(637, 49)
-        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_usuario.Location = New System.Drawing.Point(956, 75)
         Me.txt_usuario.Name = "txt_usuario"
-        Me.txt_usuario.Size = New System.Drawing.Size(212, 32)
+        Me.txt_usuario.Size = New System.Drawing.Size(316, 45)
         Me.txt_usuario.TabIndex = 36
         '
         'cmb_tipo
@@ -279,30 +269,29 @@ Partial Class frm_cadastro
         Me.cmb_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_tipo.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_tipo.FormattingEnabled = True
-        Me.cmb_tipo.Location = New System.Drawing.Point(350, 188)
-        Me.cmb_tipo.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmb_tipo.Location = New System.Drawing.Point(525, 289)
         Me.cmb_tipo.Name = "cmb_tipo"
-        Me.cmb_tipo.Size = New System.Drawing.Size(391, 33)
+        Me.cmb_tipo.Size = New System.Drawing.Size(584, 45)
         Me.cmb_tipo.TabIndex = 34
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(345, 157)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(518, 242)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(280, 27)
+        Me.Label6.Size = New System.Drawing.Size(418, 41)
         Me.Label6.TabIndex = 33
         Me.Label6.Text = "Segmento da Empresa"
         '
         'txt_cnpj
         '
         Me.txt_cnpj.Font = New System.Drawing.Font("Bernard MT Condensed", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cnpj.Location = New System.Drawing.Point(437, 49)
+        Me.txt_cnpj.Location = New System.Drawing.Point(656, 75)
+        Me.txt_cnpj.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_cnpj.Mask = "00,000,000/0000-00"
         Me.txt_cnpj.Name = "txt_cnpj"
-        Me.txt_cnpj.Size = New System.Drawing.Size(195, 32)
+        Me.txt_cnpj.Size = New System.Drawing.Size(290, 45)
         Me.txt_cnpj.TabIndex = 32
         '
         'btn_voltar
@@ -314,9 +303,10 @@ Partial Class frm_cadastro
         Me.btn_voltar.ForeColor = System.Drawing.SystemColors.Highlight
         Me.btn_voltar.Image = CType(resources.GetObject("btn_voltar.Image"), System.Drawing.Image)
         Me.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_voltar.Location = New System.Drawing.Point(12, 415)
+        Me.btn_voltar.Location = New System.Drawing.Point(18, 638)
+        Me.btn_voltar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_voltar.Name = "btn_voltar"
-        Me.btn_voltar.Size = New System.Drawing.Size(110, 39)
+        Me.btn_voltar.Size = New System.Drawing.Size(165, 60)
         Me.btn_voltar.TabIndex = 32
         Me.btn_voltar.Text = "Voltar"
         Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -331,9 +321,10 @@ Partial Class frm_cadastro
         Me.btn_seguir.ForeColor = System.Drawing.SystemColors.Highlight
         Me.btn_seguir.Image = CType(resources.GetObject("btn_seguir.Image"), System.Drawing.Image)
         Me.btn_seguir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_seguir.Location = New System.Drawing.Point(773, 416)
+        Me.btn_seguir.Location = New System.Drawing.Point(1160, 640)
+        Me.btn_seguir.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_seguir.Name = "btn_seguir"
-        Me.btn_seguir.Size = New System.Drawing.Size(110, 39)
+        Me.btn_seguir.Size = New System.Drawing.Size(165, 60)
         Me.btn_seguir.TabIndex = 34
         Me.btn_seguir.Text = "Seguir"
         Me.btn_seguir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -341,16 +332,16 @@ Partial Class frm_cadastro
         '
         'frm_cadastro
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(895, 466)
+        Me.ClientSize = New System.Drawing.Size(1342, 717)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btn_seguir)
         Me.Controls.Add(Me.btn_voltar)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "frm_cadastro"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

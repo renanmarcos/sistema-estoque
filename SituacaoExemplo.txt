@@ -2,7 +2,7 @@ Essa é uma situação de exemplo de duas empresas distintas fazendo o controle de 
 
 
 EMPRESA: Mercadinho - CNPJ: 88.724.022/0001-45
-LOGIN: mercadinho - SENHA: mer123cadinho
+LOGIN: mercadinho - SENHA: 1234
 ================================================================================
 Compra de 300 Coca-Cola de 2 Litros por 5 reais no dia 09/10/2017
 Compra de 50 Coca-Cola de 2 Litros por 4 reais no dia 19/10/2017
@@ -18,7 +18,7 @@ Compra de 10 Coca-Cola dde 2 Litros por 6 reais no dia 20/10/2017
 
 
 EMPRESA: Intel - CNPJ: 11.819.735/0001-68
-LOGIN: intel - SENHA: processadoresIntel
+LOGIN: intel - SENHA: 1234
 ================================================================================
 Compra de 20 processadores Intel Core i9 por 2000 reais no dia 09/11/2017
 Compra de 15 processadores Intel Core i9 por 2200 reais no dia 10/11/2017

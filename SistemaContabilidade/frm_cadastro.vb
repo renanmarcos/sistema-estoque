@@ -73,8 +73,8 @@
     End Sub
 
     Private Sub btn_voltar_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
-        Me.Close()
         frm_menu.Show()
+        Me.Close()
     End Sub
     Sub Verifica_ID()
         sql = "select * from tb_login"

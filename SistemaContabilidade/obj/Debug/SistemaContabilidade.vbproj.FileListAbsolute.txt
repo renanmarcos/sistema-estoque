@@ -1,102 +1,26 @@
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADODB.dll
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADOMD.dll
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADODB.dll
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADOMD.dll
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_planoContas.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_relatorio.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_rel_view.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADODB.dll
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADOMD.dll
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADODB.dll
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADOMD.dll
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_planoContas.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_relatorio.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_rel_view.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque.resources
-C:\Users\Matheus1\Source\Repos\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque2.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque.resources
-C:\Users\Renan\Documents\Visual Studio 2017\Projects\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque2.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADODB.dll
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADOMD.dll
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADODB.dll
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADOMD.dll
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque2.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_planoContas.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_relatorio.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_rel_view.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
-C:\Users\Gabriel\Documents\GitHub\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADODB.dll
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADOMD.dll
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADODB.dll
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADOMD.dll
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque2.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_planoContas.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_relatorio.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_rel_view.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
-C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe.config
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.exe
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.pdb
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\bin\Debug\SistemaContabilidade.xml
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADODB.dll
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\bin\Debug\Interop.ADOMD.dll
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADODB.dll
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\Interop.ADOMD.dll
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.ResolveComReference.cache
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_cadastro.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_estoque2.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_login.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_manutencao.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_menu.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_planoContas.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_recuperar.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_relatorio.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.frm_rel_view.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.Resources.resources
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.GenerateResource.Cache
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbproj.CoreCompileInputs.cache
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
+C:\Users\l-fer\Documents\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb

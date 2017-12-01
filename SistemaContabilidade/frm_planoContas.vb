@@ -114,13 +114,9 @@
         End If
     End Sub
 
-    Private Sub tab_ativo_Click(sender As Object, e As EventArgs) Handles tab_ativo.Click
-
-    End Sub
-
     Private Sub btn_voltar_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
-        Me.Close()
         frm_menu.Show()
+        Me.Close()
     End Sub
 
     Private Sub btn_cadastrar_passivo_Click(sender As Object, e As EventArgs) Handles btn_cadastrar_passivo.Click
@@ -252,7 +248,7 @@
                         sql = "INSERT INTO tb_entrada (id, quantidade, valor_unitario, valor_total, grupo_contas, " &
                               "data_entrada, hora_entrada) VALUES(" & id & ", " & txt_qtd.Text & ", " &
                               "'" & txt_vunit.Text & "', '" & vtotal & "', '" & grupoConta & "', " &
-                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
+                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:ss") & "')"
                         db.Execute(sql)
                         MsgBox("Produto inserido com sucesso!")
                         atualizar = 1
@@ -271,7 +267,7 @@
                         sql = "INSERT INTO tb_entrada (id, quantidade, valor_unitario, valor_total, grupo_contas, " &
                               "data_entrada, hora_entrada) VALUES(" & id & ", " & txt_qtd.Text & ", " &
                               "'" & txt_vunit.Text & "', '" & vtotal & "', '" & grupoConta & "', " &
-                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
+                              "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:ss") & "')"
                         db.Execute(sql)
                         atualizarSugestoes()
 
@@ -337,13 +333,13 @@
 
                                     sql = "INSERT INTO tb_saida_peps VALUES(" & id & ", " & rs.Fields("lote").Value & ", " & qtdAtualLote & "," &
                                           "" & rs.Fields("valor_unitario").Value & ", " & qtdAtualLote * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
-                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
+                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:ss") & "')"
                                     db.Execute(sql)
                                 Else
 
                                     sql = "INSERT INTO tb_saida_peps VALUES(" & id & ", " & rs.Fields("lote").Value & ", " & qtdDigitada & "," &
                                           "" & rs.Fields("valor_unitario").Value & ", " & qtdDigitada * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
-                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
+                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:ss") & "')"
                                     db.Execute(sql)
 
                                     qtdDigitada = 0
@@ -373,13 +369,13 @@
 
                                     sql = "INSERT INTO tb_saida_ueps VALUES(" & id & ", " & rs.Fields("lote").Value & ", " & qtdAtualLote & "," &
                                           "" & rs.Fields("valor_unitario").Value & ", " & qtdAtualLote * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
-                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
+                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:ss") & "')"
                                     db.Execute(sql)
                                 Else
 
                                     sql = "INSERT INTO tb_saida_ueps VALUES(" & id & ", " & rs.Fields("lote").Value & ", " & qtdDigitada & "," &
                                           "" & rs.Fields("valor_unitario").Value & ", " & qtdDigitada * rs.Fields("valor_unitario").Value & ", '" & grupoConta & "', " &
-                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
+                                          "'" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:ss") & "')"
                                     db.Execute(sql)
 
                                     qtdDigitada = 0
@@ -397,7 +393,7 @@
                         qtdDigitada = Integer.Parse(txt_qtd.Text)
 
                         sql = "INSERT INTO tb_saida_media VALUES(" & id & ", " & qtdDigitada & ", '" & valorUnitario & "', '" & valorUnitario * qtdDigitada & "', " &
-                              "'" & grupoConta & "', '" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:00") & "')"
+                              "'" & grupoConta & "', '" & DateTime.Now.ToString("dd/MM/yyyy") & "', '" & DateTime.Now.ToString("HH:mm:ss") & "')"
                         db.Execute(sql)
                         atualizar = 1
                         atualizartreeview()

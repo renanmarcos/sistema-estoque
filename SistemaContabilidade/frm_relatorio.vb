@@ -198,7 +198,7 @@
         sql = "SELECT data_entrada, hora_entrada, quantidade, valor_unitario, valor_total FROM tb_entrada WHERE id = " & idProd & " ORDER BY data_entrada, hora_entrada"
         rsEntrada = db.Execute(sql)
         'sql = "SELECT data_saida, hora_saida, quantidade, valor_unitario, valor_total FROM tb_saida_peps WHERE id = " & idProd & " ORDER BY data_saida, hora_saida" 'Ignora essa linha
-        sql = "SELECT MIN(data_saida) AS data, MIN(hora_saida) AS hora, SUM(quantidade) AS qtd, SUM(valor_unitario) AS vunit, SUM(valor_total) AS vtotal FROM tb_saida_ueps WHERE id = " & idProd & " GROUP BY id, data_saida"
+        sql = "SELECT MIN(data_saida) AS data, MIN(hora_saida) AS hora, SUM(quantidade) AS qtd, SUM(valor_unitario) AS vunit, SUM(valor_total) AS vtotal FROM tb_saida_ueps WHERE id = " & idProd & " GROUP BY id, data_saida, hora_saida"
         rsSaida = db.Execute(sql)
 
         'Nmero de registros
@@ -297,7 +297,6 @@
 
                 'Calcula saldo total
                 Dim qtds As String = "", valores As String = "", total As Double = 0D ', precoUnit As Double = rsSaida.Fields(3).Value, totalUnit As Double = rsSaida.Fields(4).Value
-                saldo.Reverse()
                 For Each l As Lote In saldo
                     qtds += l.qtd & "<br>"
                     valores += l.valor.ToString("C") & "<br>"

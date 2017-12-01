@@ -47,10 +47,11 @@ Public Class frm_login
                         If tipo_conta = rs.Fields("tipo_conta").Value Then
                             cnpj = rs.Fields("cnpj").Value
                             nome_fantasia = rs.Fields("nome_fantasia").Value
-                            frm_menu.Show()
                             txt_senha.Clear()
                             txt_usuario.Clear()
                             cmb_nivel.SelectedIndex = 0
+                            frm_menu.Show()
+                            Me.Close()
                         Else
                             MsgBox("Você precisa acessar como " & rs.Fields("tipo_conta").Value, vbInformation + vbOKOnly, "Atenção")
                         End If

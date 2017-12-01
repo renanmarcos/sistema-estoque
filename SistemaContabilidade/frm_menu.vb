@@ -1,19 +1,22 @@
 ﻿Public Class frm_menu
     Private Sub CadastroDeContasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeContasToolStripMenuItem.Click
         frm_cadastro.Show()
+        Me.Close()
     End Sub
 
     Private Sub ListarContasAtivasbloqueadasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarContasAtivasbloqueadasToolStripMenuItem.Click
         frm_manutencao.Show()
+        Me.Close()
     End Sub
 
     Private Sub CadastroDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs)
         frm_cadastro.Show()
+        Me.Close()
     End Sub
 
     Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click
-        Me.Close()
         frm_login.Show()
+        Me.Close()
     End Sub
 
     Private Sub EncerrarSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSistemaToolStripMenuItem.Click
@@ -30,6 +33,7 @@
 
     Private Sub PlanoDeContasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlanoDeContasToolStripMenuItem.Click
         frm_planoContas.Show()
+        Me.Close()
     End Sub
 
     Private Sub RelatórioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelatórioToolStripMenuItem.Click
@@ -37,6 +41,11 @@
     End Sub
 
     Private Sub EstoqueToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EstoqueToolStripMenuItem.Click
-        frm_estoque.Show()
+        If tipo_conta = "Administrador" Then
+            MsgBox("Não é permitido ao Administrador cadastrar produtos.")
+        Else
+            frm_estoque.Show()
+            Me.Close()
+        End If
     End Sub
 End Class

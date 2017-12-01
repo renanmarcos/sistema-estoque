@@ -1,5 +1,5 @@
 ﻿Public Class frm_estoque2
-    Dim cont As Integer
+    Dim id As Integer
     Private Sub frm_estoque2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmb_categoria.SelectedIndex = 0
     End Sub
@@ -10,18 +10,19 @@
         Else
 
             If editar = 1 Then
-                sql = "UPDATE tb_produtos set nome = '" & txt_nome.Text & "' , descricao = '" & txt_descricao.Text &
-                "' , categoria = '" & cmb_categoria.Text & "' where nome = '" & frm_estoque.nomeproduto & "'"
-            Else
-                sql = "select * from tb_produtos"
+                sql = "SELECT id FROM tb_produtos WHERE nome='" & txt_nome.Text & "' AND cnpj='" & cnpj & "'"
                 rs = db.Execute(sql)
-                Do While rs.EOF = False
-                    cont = cont + 1
-                    rs.MoveNext()
-                Loop
+                id = rs.Fields(0).Value
+
+                sql = "UPDATE tb_produtos set nome = '" & txt_nome.Text & "' , descricao = '" & txt_descricao.Text &
+                "' , categoria = '" & cmb_categoria.Text & "' where id = " & id & ""
+            Else
+                sql = "SELECT MAX(id) FROM tb_produtos"
+                rs = db.Execute(sql)
+                id = rs.Fields(0).Value + 1
 
                 sql = "INSERT INTO tb_produtos (cnpj, id, nome, descricao, categoria) VALUES(" &
-                      "'" & cnpj & "', '" & cont + 1 & "', '" & txt_nome.Text & "', '" & txt_descricao.Text & "', '" & cmb_categoria.Text & "')"
+                      "'" & cnpj & "', " & id & ", '" & txt_nome.Text & "', '" & txt_descricao.Text & "', '" & cmb_categoria.Text & "')"
             End If
         End If
 
