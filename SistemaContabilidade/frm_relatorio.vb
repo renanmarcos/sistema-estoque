@@ -36,7 +36,7 @@
             .gray-td{background-color: #eee;}
 		</style>
 	    </head><body><table border='1' cellspacing='0' cellpadding='10px'>
-		<!--<tr id='tr-title'><td colspan='10'>" & lst_produtos.SelectedItem.ToString & " - Relatório " & cmb_metodo.Text & "</td></tr>-->
+		<tr id='tr-title'><td colspan='10'>" & lst_produtos.SelectedItem.ToString & " - Relatório " & cmb_metodo.Text & "</td></tr>
 		<tr id='tr-info'><td rowspan='2'>DATA</td><td colspan='3'>ENTRADA</td><td colspan='3'>SAÍDA</td><td colspan='3'>SALDO</td></tr>
 		<tr id='tr-info2'><td>QTD</td><td>PREÇO UNIT.</td><td>VALOR TOTAL</td><td>QTD</td><td>PREÇO UNIT.</td><td>VALOR TOTAL</td><td>QTD</td><td>PREÇO UNIT.</td><td>VALOR TOTAL</td></tr>"
 
@@ -324,13 +324,13 @@
 
     Public Sub gerarMP(idProd As Integer)
         'Coleção para saldo
-        Dim saldo As New ArrayList
+        Dim saldo As Lote = New Lote(0, 0D, 0D)
 
         'RecordSet's e querys
         Dim rsEntrada, rsSaida As New ADODB.Recordset
         sql = "SELECT data_entrada, hora_entrada, quantidade, valor_unitario, valor_total FROM tb_entrada WHERE id = " & idProd & " ORDER BY data_entrada, hora_entrada"
         rsEntrada = db.Execute(sql)
-        sql = "SELECT data_saida, hora_saida, quantidade, valor_unitario, valor_total FROM tb_saida_media WHERE id = " & idProd & " ORDER BY data_saida, hora_saida"
+        sql = "SELECT data_saida, hora_saida, quantidade FROM tb_saida_media WHERE id = " & idProd & " ORDER BY data_saida, hora_saida"
         rsSaida = db.Execute(sql)
 
         'Nmero de registros
@@ -340,7 +340,6 @@
         End If
 
         While Not rsEntrada.EOF Or Not rsSaida.EOF
-
             'Datas
             Dim dataEntrada, dataSaida As DateTime
             If rsEntrada.EOF Then
@@ -356,94 +355,34 @@
 
             relHTML += "<tr>"
             If dataEntrada <= dataSaida Then 'Primeiro vem entrada
-                'Adiciona no saldo
-                saldo.Add(New Lote(rsEntrada.Fields(2).Value, rsEntrada.Fields(3).Value, rsEntrada.Fields(4).Value))
+                'Calcula saldo
+                saldo.qtd += rsEntrada.Fields(2).Value
+                saldo.total += FormatNumber(rsEntrada.Fields(4).Value, 2)
+                saldo.valor = FormatNumber(saldo.total / saldo.qtd, 2)
 
-                'Calcula saldo total
-                Dim qtds As String = "", valores As String = "", total As Double = 0D, precoUnit As Double = rsEntrada.Fields(3).Value, totalUnit As Double = rsEntrada.Fields(4).Value
-                For Each l As Lote In saldo
-                    qtds += l.qtd & "<br>"
-                    valores += l.valor.ToString("C") & "<br>"
-                    total += l.total
-                Next
+                'Informações de entrada
+                Dim precoUnit As Double = FormatNumber(rsEntrada.Fields(3).Value, 2), totalUnit As Double = FormatNumber(rsEntrada.Fields(4).Value, 2)
 
                 relHTML += "
                 <td>" & dataEntrada.ToShortDateString & "</td>
                 <td>" & rsEntrada.Fields(2).Value & "</td><td>" & precoUnit.ToString("C") & "</td><td>" & totalUnit.ToString("C") & "</td>
                 <td class='gray-td'></td><td class='gray-td'></td><td class='gray-td'></td>
-                <td>" & qtds & "</td><td>" & valores & "</td><td>" & total.ToString("C") & "</td>"
+                <td>" & saldo.qtd & "</td><td>" & saldo.valor.ToString("C") & "</td><td>" & saldo.total.ToString("C") & "</td>"
 
                 If Not rsEntrada.EOF Then
                     rsEntrada.MoveNext()
                 End If
             Else 'Primeiro vem saída
-                'Subtrai do saldo
-                Dim qtdSaida As Integer = rsSaida.Fields(2).Value, lotesToRemove As ArrayList = New ArrayList, lotesSaida As ArrayList = New ArrayList
-                saldo.Reverse()
-                For Each l As Lote In saldo
-                    If qtdSaida = 0 Then
-                        Exit For
-                    End If
-                    Dim loteSaida As Lote = New Lote(0, 0D, 0D)
-                    If l.qtd < qtdSaida Then 'Remove da saída, lote some
-                        qtdSaida -= l.qtd
-                        lotesToRemove.Add(l)
-
-                        loteSaida.qtd = l.qtd
-                        loteSaida.valor = l.valor
-                        loteSaida.recalculateTotal()
-                        lotesSaida.Add(loteSaida)
-                    ElseIf l.qtd = qtdSaida Then 'Justo de um lote, lote some
-                        lotesToRemove.Add(l)
-
-                        loteSaida.qtd = l.qtd
-                        loteSaida.valor = l.valor
-                        loteSaida.recalculateTotal()
-                        lotesSaida.Add(loteSaida)
-                    Else 'Remove do lote
-                        l.qtd -= qtdSaida
-                        l.recalculateTotal()
-
-                        loteSaida.qtd = qtdSaida
-                        loteSaida.valor = l.valor
-                        qtdSaida = 0
-                        loteSaida.recalculateTotal()
-                        lotesSaida.Add(loteSaida)
-                        Exit For
-                    End If
-                Next
-                saldo.Reverse()
-
-                For Each l As Lote In lotesToRemove
-                    saldo.Remove(l)
-                Next
-
-                'Calcula saldo descontado
-                Dim qtdDesc As String = "", valoresDesc As String = "", totalDesc As Double = 0D
-                For Each l As Lote In lotesSaida
-                    qtdDesc += l.qtd & "<br>"
-                    valoresDesc += l.valor.ToString("C") & "<br>"
-                    totalDesc += l.total
-                Next
-
-                'Calcula saldo total
-                Dim qtds As String = "", valores As String = "", total As Double = 0D ', precoUnit As Double = rsSaida.Fields(3).Value, totalUnit As Double = rsSaida.Fields(4).Value
-                saldo.Reverse()
-                For Each l As Lote In saldo
-                    qtds += l.qtd & "<br>"
-                    valores += l.valor.ToString("C") & "<br>"
-                    total += l.total
-                Next
-                saldo.Reverse()
+                'Subtrai/adiciona do saldo
+                Dim qtdSaida As Integer = rsSaida.Fields(2).Value, valorSaida As Double = FormatNumber(saldo.valor, 2), totalSaida As Double = FormatNumber(qtdSaida * valorSaida, 2)
+                Dim qtdSaldo As Integer = saldo.qtd - qtdSaida, totalSaldo As Double = FormatNumber(saldo.total, 2) - totalSaida, valorSaldo As Double = FormatNumber(totalSaldo / qtdSaldo, 2)
 
                 'gera HTML
-                '<td>" & rsSaida.Fields(2).Value & "</td><td>" & precoUnit.ToString("C") & "</td><td>" & totalUnit.ToString("C") & "</td>
                 relHTML += "
                 <td>" & dataSaida.ToShortDateString & "</td>
                 <td class='gray-td'></td><td class='gray-td'></td><td class='gray-td'></td>
-                
-                <td>" & qtdDesc & "</td><td>" & valoresDesc & "</td><td>" & totalDesc.ToString("C") & "</td>
-                <td>" & qtds & "</td><td>" & valores & "</td><td>" & total.ToString("C") & "</td>"
+                <td>" & qtdSaida & "</td><td>" & valorSaida.ToString("C") & "</td><td>" & totalSaida.ToString("C") & "</td>
+                <td>" & qtdSaldo & "</td><td>" & valorSaldo.ToString("C") & "</td><td>" & totalSaldo.ToString("C") & "</td>"
 
                 If Not rsSaida.EOF Then
                     rsSaida.MoveNext()
