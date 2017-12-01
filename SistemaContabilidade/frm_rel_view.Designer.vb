@@ -33,7 +33,7 @@ Partial Class frm_rel_view
         Me.wb_rel_view.Location = New System.Drawing.Point(0, 0)
         Me.wb_rel_view.MinimumSize = New System.Drawing.Size(20, 20)
         Me.wb_rel_view.Name = "wb_rel_view"
-        Me.wb_rel_view.Size = New System.Drawing.Size(567, 379)
+        Me.wb_rel_view.Size = New System.Drawing.Size(844, 379)
         Me.wb_rel_view.TabIndex = 0
         '
         'frm_rel_view
@@ -41,7 +41,7 @@ Partial Class frm_rel_view
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(567, 379)
+        Me.ClientSize = New System.Drawing.Size(844, 379)
         Me.Controls.Add(Me.wb_rel_view)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_rel_view"
