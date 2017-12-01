@@ -99,3 +99,4 @@ C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaCon
 C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.exe
 C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.xml
 C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.pdb
+C:\Users\lucasdm\source\SistemaEstoque\SistemaContabilidade\obj\Debug\SistemaContabilidade.vbprojResolveAssemblyReference.cache
