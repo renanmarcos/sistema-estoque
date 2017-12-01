@@ -482,7 +482,7 @@ Partial Class frm_planoContas
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_planoContas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_planoContas"
+        Me.Text = "Plano de Contas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.tab_cadastro.ResumeLayout(False)
         Me.tab_ativo.ResumeLayout(False)
